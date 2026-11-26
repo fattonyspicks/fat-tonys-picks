@@ -84,8 +84,35 @@
   .empty p{margin:0;font-weight:700;font-size:13.5px}
   .empty span{color:var(--muted);font-weight:500;font-size:12.3px}
 </style>
+
+<style>
+.ftp-topbar{position:sticky;top:0;z-index:999;background:rgba(12,13,15,.97);border-bottom:2px solid #c9a227;font-family:Arial,Helvetica,sans-serif}
+.ftp-topbar-in{max-width:1100px;margin:0 auto;padding:0 16px;display:flex;align-items:center;gap:20px;min-height:52px;flex-wrap:wrap}
+.ftp-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#f5f2ea;flex-shrink:0}
+.ftp-mark{width:32px;height:32px;border-radius:8px;background:#c9a227;color:#1a1405;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;letter-spacing:.03em}
+.ftp-name{font-weight:800;font-size:19px;letter-spacing:.04em;text-transform:uppercase;line-height:1;white-space:nowrap}
+.ftp-name em{font-style:normal;color:#e8bc3a}
+.ftp-nav{display:flex;gap:18px;flex-wrap:wrap;margin-left:auto}
+.ftp-nav a{color:#f5f2ea;text-decoration:none;font-size:13.5px;font-weight:600;letter-spacing:.02em}
+.ftp-nav a:hover{color:#e8bc3a}
+</style>
 </head>
 <body>
+<header class="ftp-topbar">
+  <div class="ftp-topbar-in">
+    <a class="ftp-brand" href="index.html" aria-label="Fat Tony's Picks — home">
+      <span class="ftp-mark" aria-hidden="true">FT</span>
+      <span class="ftp-name">Fat Tony's <em>Picks</em></span>
+    </a>
+    <nav class="ftp-nav" aria-label="Site">
+      <a href="index.html#boards">Boards</a>
+      <a href="index.html#strong">Strong Picks</a>
+      <a href="index.html#method">The Method</a>
+      <a href="index.html#follow">Follow</a>
+    </nav>
+  </div>
+</header>
+
 <main>
 
   <div class="dash-header">
