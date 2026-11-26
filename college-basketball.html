@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>NCAA Men's Basketball — Wednesday, Nov 25, 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2rem; }
+      a { padding-block: 0.35rem; }
+      :root {
+        --bg: #f4f2ec; --surface: #fffdf8; --surface-2: #eceade; --ink: #1c1a15; --ink-2: #57534a; --line: #d8d3c3;
+        --accent: #b33a1f; --accent-ink: #ffffff; --fan: #fdf3e3; --fan-line: #d99a2b; --fan-ink: #7a4d00;
+        --good: #1e6b3a; --good-bg: #e2efe4; --lean: #8a5a00; --lean-bg: #f7ecd2; --nobet: #5c574d; --nobet-bg: #e9e6dc; --unv: #a33b2e;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #14120e; --surface: #1e1b16; --surface-2: #2a261e; --ink: #f0ead9; --ink-2: #b3ab97; --line: #3d382c;
+          --accent: #e05a38; --fan: #33270f; --fan-line: #b97f22; --fan-ink: #f2c979; --good: #7fc98f; --good-bg: #1d3323;
+          --lean: #eec27a; --lean-bg: #38300f; --nobet: #b3ab97; --nobet-bg: #2a261e; --unv: #ef9a8a;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Barlow", system-ui, -apple-system, sans-serif; font-size: 16px; line-height: 1.45; }
+      .wrap { max-width: 880px; margin: 0 auto; padding: 20px 16px 48px; }
+      .num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+      .head-row { display: flex; gap: 14px; align-items: center; border-bottom: 3px solid var(--ink); padding-bottom: 10px; }
+      .head-logo { flex: none; width: 118px; height: auto; display: block; }
+      @media (prefers-color-scheme: dark) { .head-logo { background: #fffdf8; border-radius: 4px; padding: 4px 6px; } }
+      @media (max-width: 480px) { .head-logo { width: 92px; } }
+      .head-line { font-size: 0.92rem; line-height: 1.5; color: var(--ink-2); margin: 0; }
+      .head-line strong { color: var(--ink); }
+      .top { margin-top: 22px; background: var(--surface); border: 2px solid var(--ink); border-radius: 6px; overflow: hidden; }
+      .top-head { background: var(--ink); color: var(--bg); padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+      .top-head h2 { font-family: "Barlow Condensed", sans-serif; font-size: 1.55rem; font-weight: 700; margin: 0; letter-spacing: 0.03em; text-transform: uppercase; }
+      .top-sec { padding: 6px 16px 14px; }
+      .top-sec + .top-sec { border-top: 1px solid var(--line); }
+      .top-sec h3 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 12px 0 4px; }
+      .pick { display: grid; grid-template-columns: 2rem 1fr auto; gap: 4px 10px; padding: 10px 0; border-bottom: 1px dashed var(--line); align-items: baseline; }
+      .pick:last-child { border-bottom: 0; }
+      .pick .rank { font-family: "Barlow Condensed", sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+      .pick .play { font-size: 1.12rem; font-weight: 700; }
+      .pick .play .price { color: var(--accent); white-space: nowrap; }
+      .pick .meta { grid-column: 2 / 3; color: var(--ink-2); font-size: 0.92rem; }
+      .conf { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; white-space: nowrap; align-self: center; }
+      .conf.high { background: var(--good-bg); color: var(--good); }
+      .conf.med { background: var(--lean-bg); color: var(--lean); }
+      .nopick { padding: 8px 0 4px; font-size: 1rem; }
+      .nopick strong { font-weight: 700; }
+      .props { margin-top: 22px; background: var(--surface); border: 2px solid var(--ink); border-radius: 6px; overflow: hidden; }
+      .props-head { background: var(--accent); color: #ffffff; padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+      .props-head h2 { font-family: "Barlow Condensed", sans-serif; font-size: 1.55rem; font-weight: 700; margin: 0; letter-spacing: 0.03em; text-transform: uppercase; }
+      .props-head span { font-size: 0.85rem; opacity: 0.9; }
+      .props-body { padding: 6px 16px 14px; }
+      .cards-head { font-family: "Barlow Condensed", sans-serif; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; margin: 34px 0 14px; }
+      .card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 16px; margin-bottom: 16px; }
+      .card-top { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: flex-start; }
+      .card h3 { font-family: "Barlow Condensed", sans-serif; font-size: 1.45rem; font-weight: 700; line-height: 1.05; margin: 0; flex: 1 1 260px; }
+      .grade { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 10px; border-radius: 4px; white-space: nowrap; }
+      .grade.strong { background: var(--good-bg); color: var(--good); }
+      .grade.lean { background: var(--lean-bg); color: var(--lean); }
+      .grade.nobet { background: var(--nobet-bg); color: var(--nobet); }
+      .when { color: var(--ink-2); font-size: 0.92rem; margin: 3px 0 12px; }
+      .mynum { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-bottom: 12px; }
+      .mynum .cell { background: var(--surface-2); border-radius: 4px; padding: 8px 11px; }
+      .mynum .k { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); display: block; }
+      .mynum .v { font-size: 1.18rem; font-weight: 700; }
+      .mynum .v small { font-size: 0.85rem; font-weight: 500; color: var(--ink-2); }
+      .edge-pos { color: var(--good); }
+      .edge-nil { color: var(--ink-2); }
+      .books { border: 1px solid var(--line); border-radius: 4px; overflow: hidden; margin-bottom: 12px; }
+      .books .brow { display: grid; grid-template-columns: 92px 1fr 1fr 1fr; gap: 0; border-bottom: 1px solid var(--line); }
+      .books .brow:last-child { border-bottom: 0; }
+      .books .brow > div { padding: 7px 9px; font-size: 0.94rem; }
+      .books .brow.head { background: var(--surface-2); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+      .books .brow .mkt { font-weight: 600; color: var(--ink-2); font-size: 0.85rem; }
+      .books .fan { background: var(--fan); }
+      .books .fan .p { color: var(--fan-ink); font-weight: 700; }
+      .books .p { font-weight: 600; }
+      .books .unv { color: var(--unv); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.05em; }
+      .books .cons { grid-column: 1 / -1; font-size: 0.85rem; color: var(--ink-2); background: var(--surface); border-top: 1px dashed var(--line); padding: 6px 9px; }
+      .prim-tag { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; color: var(--fan-ink); display: block; }
+      .glance { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; margin-top: 22px; }
+      .glance h2 { font-family: "Barlow Condensed", sans-serif; font-size: 1.3rem; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 0.03em; }
+      .glance ul { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 28px; font-size: 0.94rem; }
+      .glance li { padding: 3px 0; break-inside: avoid; }
+      .glance .t { font-weight: 700; }
+      @media (max-width: 560px) { .glance ul { columns: 1; } }
+      footer { margin-top: 26px; border-top: 3px solid var(--ink); padding-top: 12px; font-size: 0.88rem; color: var(--ink-2); }
+      footer p { margin: 0 0 8px; }
+      .age { font-weight: 700; color: var(--ink); }
+      @media (max-width: 480px) {
+        .books .brow { grid-template-columns: 74px 1fr 1fr 1fr; }
+        .books .brow > div { padding: 6px 6px; font-size: 0.86rem; }
+        .pick { grid-template-columns: 1.6rem 1fr auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <div class="head-row">
+        <img class="head-logo" src="data:image/png;base64,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" alt="NCAA March Madness logo" width="500" height="214" />
+        <p class="head-line"><strong>Last refreshed: Wednesday, November 25, 2026 at 7:31 PM CST</strong></p>
+      </div>
+
+      <section class="top" aria-label="Top picks for the day">
+        <div class="top-head"><h2>★ Top Picks for the Day</h2></div>
+        <div class="top-sec">
+          <h3>Teams</h3>
+          <div class="pick">
+            <div class="rank">1</div>
+            <div class="play">Saint Louis −3.5 — vs. Stanford <span class="price num">−110 · DraftKings ★ BEST</span></div>
+            <div class="conf high">High</div>
+            <div class="meta">Acrisure Arena, Palm Springs · 10:59 PM CST</div>
+          </div>
+          <div class="pick">
+            <div class="rank">2</div>
+            <div class="play">Over 147.5 — Clemson vs. Colorado State <span class="price num">−110 · FanDuel ★ BEST</span></div>
+            <div class="conf high">High</div>
+            <div class="meta">Maui Invitational, Lahaina · 11:30 PM CST</div>
+          </div>
+          <div class="pick">
+            <div class="rank">3</div>
+            <div class="play">Colorado State +3.5 — vs. Clemson <span class="price num">−115 · FanDuel ★ BEST</span></div>
+            <div class="conf high">High</div>
+            <div class="meta">Maui Invitational, Lahaina · 11:30 PM CST</div>
+          </div>
+        </div>
+        <div class="top-sec">
+          <h3>Players</h3>
+          <p class="nopick"><strong>No player prop clears the bar today.</strong></p>
+        </div>
+      </section>
+
+      <section class="props" aria-label="Player props">
+        <div class="props-head"><h2>Player Props</h2><span>Ranked best to worst · Strong first, then Lean</span></div>
+        <div class="props-body">
+          <p class="nopick"><strong>No player prop clears the bar today.</strong> No Strong (5-pt) or Lean (2–3-pt) prop with a verified Fanatics / DraftKings / FanDuel price.</p>
+        </div>
+      </section>
+
+      <h2 class="cards-head">Detailed Game Cards</h2>
+
+      <article class="card">
+        <div class="card-top"><h3>Saint Louis vs. Stanford</h3><span class="grade strong">Strong · Saint Louis −3.5 · 1u</span></div>
+        <p class="when num">10:59 PM CST · CBS Sports Network · Acrisure Arena, Palm Springs (neutral) · Saint Louis 3–3 · Stanford 5–2</p>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Spread (blend)</span><span class="v">SLU −9.0</span></div>
+          <div class="cell"><span class="k">Market</span><span class="v">SLU −3.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-pos">5.5 pts → Saint Louis</span></div>
+          <div class="cell"><span class="k">Model prob / EV</span><span class="v">60% · +14.5% <small>at −110</small></span></div>
+        </div>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Total (blend)</span><span class="v">155.2</span></div>
+          <div class="cell"><span class="k">Market Total</span><span class="v">153.5 <small>FanDuel</small> · 154.5 <small>DK</small></span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">1.7 pts — below bar</span></div>
+          <div class="cell"><span class="k">Model win prob</span><span class="v">Saint Louis 79%</span></div>
+        </div>
+        <div class="books num">
+          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread 3.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">SLU −3.5 −110 ★ BEST</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">154.5 · U −105</span></div><div><span class="p">153.5 · U −105 ★ BEST</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="p">SLU −160 ★ BEST</span> / <span class="unv">STAN UNVERIFIED</span></div></div>
+          <div class="brow"><div class="cons">Consensus: Saint Louis −3.5 / 152.5 (opened −4.5 / 154.5).</div></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Clemson vs. Colorado State</h3><span class="grade strong">Strong · Over 147.5 · CSU +3.5 · 1u</span></div>
+        <p class="when num">11:30 PM CST · ESPN2 · Lahaina Civic Center, Maui (neutral) · Clemson 4–3 · Colorado State 4–3</p>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Total (blend)</span><span class="v">152.6</span></div>
+          <div class="cell"><span class="k">Market Total</span><span class="v">147.5 <small>FanDuel</small> · 149.5 <small>cons.</small></span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-pos">5.1 pts → Over</span></div>
+          <div class="cell"><span class="k">Model prob / EV</span><span class="v">58% · +10.7% <small>at −110</small></span></div>
+        </div>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Spread (blend)</span><span class="v">Pick'em</span></div>
+          <div class="cell"><span class="k">Market</span><span class="v">CLEM −3.5 <small>FanDuel</small> · −2.5 <small>cons.</small></span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-pos">3.5 pts → Colorado State</span></div>
+          <div class="cell"><span class="k">Model prob / EV</span><span class="v">57% · +6.6% <small>at −115</small></span></div>
+        </div>
+        <div class="books num">
+          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="p">CLEM −3.5 · CSU +3.5 −115 ★ BEST</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">153.5</span></div><div><span class="p">147.5 ★ BEST</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="p">CLEM −160 / CSU +132</span></div></div>
+          <div class="brow"><div class="cons">Consensus: Clemson −2.5 / 149.5 (opened −2.5 / 153.5).</div></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>BYU vs. Providence</h3><span class="grade strong">Final · Strong · BYU −2.5</span></div>
+        <p class="when num">FINAL — BYU 85, Providence 82 · Tipped 4:30 PM CST · ESPN2 · Lahaina Civic Center, Maui (neutral) · BYU 6–1 · Providence 5–2</p>
+        <p class="when num">Not in Top Picks — game already final at the refresh. BYU played without leading scorer Robert Wright III.</p>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Spread (blend)</span><span class="v">BYU −6.2</span></div>
+          <div class="cell"><span class="k">Market</span><span class="v">BYU −2.5 <small>DK</small> · −3.5 <small>FanDuel</small></span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-pos">3.7 pts → BYU</span></div>
+          <div class="cell"><span class="k">Model win prob</span><span class="v">BYU 62%</span></div>
+        </div>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Total (blend)</span><span class="v">152.5</span></div>
+          <div class="cell"><span class="k">Market Total</span><span class="v">154.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">2.0 pts → Under · Lean</span></div>
+        </div>
+        <div class="books num">
+          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">BYU −2.5 −105 ★ BEST</span></div><div><span class="p">BYU −3.5 −110</span></div></div>
+          <div class="brow"><div class="mkt">Total 154.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="p">O −110 / U −110</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">BYU −142 / PROV +120</span></div><div><span class="p">BYU −160 / PROV +134</span></div></div>
+          <div class="brow"><div class="cons">Consensus: BYU −2.5 / 154.5 (opened −4.5 / 155.5).</div></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Memphis vs. Penn State</h3><span class="grade strong">Live · Strong · Memphis −3.5</span></div>
+        <p class="when num">LIVE — Tipped 5:35 PM CST · ESPN2 · Imperial Arena, Nassau (neutral) · Memphis 4–1 · Penn State 5–1</p>
+        <p class="when num">Not in Top Picks — game already live at the refresh.</p>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Spread (blend)</span><span class="v">MEM −6.9</span></div>
+          <div class="cell"><span class="k">Market</span><span class="v">MEM −3.5 · −4.5 <small>DK</small></span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-pos">3.4 pts → Memphis</span></div>
+          <div class="cell"><span class="k">Model win prob</span><span class="v">Memphis 71%</span></div>
+        </div>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Total (blend)</span><span class="v">163.5</span></div>
+          <div class="cell"><span class="k">Market Total</span><span class="v">162.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">1.0 pt — below bar</span></div>
+        </div>
+        <div class="books num">
+          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">MEM −4.5 −102 / PSU +4.5 −118</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Total 162.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">O −110 / U −110</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">MEM −175 / PSU +145</span></div><div><span class="p">MEM −160 ★ BEST</span></div></div>
+          <div class="brow"><div class="cons">Consensus: Memphis −3.5 / 162.5 (opened −4.5 / 165.5).</div></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Wake Forest vs. Mississippi State</h3><span class="grade strong">Live · Strong · Over 148.5</span></div>
+        <p class="when num">LIVE — Tipped 6:30 PM CST · ESPN2 · Imperial Arena, Nassau (neutral) · Wake Forest 5–1 · Mississippi State 5–1</p>
+        <p class="when num">Not in Top Picks — game already live at the refresh.</p>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Total (blend)</span><span class="v">151.7</span></div>
+          <div class="cell"><span class="k">Market Total</span><span class="v">148.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-pos">3.2 pts → Over</span></div>
+          <div class="cell"><span class="k">Model prob / EV</span><span class="v">57% · +8.8% <small>at −110</small></span></div>
+        </div>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Spread (blend)</span><span class="v">MSST −3.4</span></div>
+          <div class="cell"><span class="k">Market</span><span class="v">MSST −3.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">0.1 pts — none</span></div>
+          <div class="cell"><span class="k">Model win prob</span><span class="v">Mississippi State 58%</span></div>
+        </div>
+        <div class="books num">
+          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread 3.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Total 148.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="cons">Consensus: Mississippi State −3.5 / 148.5 (opened −4.5 / 150.5).</div></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>SMU vs. Utah State</h3><span class="grade lean">Live · Lean · SMU +3.5</span></div>
+        <p class="when num">LIVE — Tipped 6:00 PM CST · CBS Sports Network · Acrisure Arena, Palm Springs (neutral) · SMU 6–0 · Utah State 5–0</p>
+        <p class="when num">Not in Top Picks — game already live at the refresh.</p>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Spread (blend)</span><span class="v">USU −1.2</span></div>
+          <div class="cell"><span class="k">Market</span><span class="v">USU −3.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-pos">2.3 pts → SMU · Lean</span></div>
+          <div class="cell"><span class="k">Model win prob</span><span class="v">Utah State 58%</span></div>
+        </div>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Total (blend)</span><span class="v">165.1</span></div>
+          <div class="cell"><span class="k">Market Total</span><span class="v">162.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">2.6 pts → Over · Lean</span></div>
+        </div>
+        <div class="books num">
+          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread 3.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Total 162.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="cons">Consensus: Utah State −3.5 / 162.5 (opened −4.5 / 167.5).</div></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Arizona vs. Ole Miss</h3><span class="grade lean">Final · Lean · Arizona −5.5</span></div>
+        <p class="when num">FINAL — Arizona 84, Ole Miss 73 · Maui Invitational championship · ESPN · Lahaina Civic Center, Maui (neutral) · Arizona 6–1 · Ole Miss 6–0</p>
+        <p class="when num">Not in Top Picks — game already final at the refresh.</p>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Spread (blend)</span><span class="v">ARIZ −7.5</span></div>
+          <div class="cell"><span class="k">Market</span><span class="v">ARIZ −5.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-pos">2.0 pts → Arizona · Lean</span></div>
+          <div class="cell"><span class="k">Model win prob</span><span class="v">Arizona 68%</span></div>
+        </div>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Total (blend)</span><span class="v">158.0</span></div>
+          <div class="cell"><span class="k">Market Total</span><span class="v">156.5 <small>FanDuel</small> · 153.5 <small>cons.</small></span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">1.5 pts — below bar</span></div>
+        </div>
+        <div class="books num">
+          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread 5.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">ARIZ −5.5 −108 ★ BEST</span></div><div><span class="p">ARIZ −5.5 −110</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="p">156.5 · O −110 / U −110</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="p">ARIZ −230 / MISS +190</span></div></div>
+          <div class="brow"><div class="cons">Consensus: Arizona −5.5 / 153.5.</div></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Texas A&amp;M vs. Xavier</h3><span class="grade lean">Final · Lean · Texas A&amp;M −3.5</span></div>
+        <p class="when num">FINAL — Tipped 1:30 PM CST · ESPN2 · Imperial Arena, Nassau (neutral) · Texas A&amp;M 6–0</p>
+        <p class="when num">Not in Top Picks — game already final at the refresh.</p>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Spread (blend)</span><span class="v">TAMU −5.5</span></div>
+          <div class="cell"><span class="k">Market</span><span class="v">TAMU −3.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-pos">2.0 pts → Texas A&amp;M · Lean</span></div>
+          <div class="cell"><span class="k">Model win prob</span><span class="v">Texas A&amp;M 64%</span></div>
+        </div>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Total (blend)</span><span class="v">168.5</span></div>
+          <div class="cell"><span class="k">Market Total</span><span class="v">170.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">2.0 pts → Under · Lean</span></div>
+        </div>
+        <div class="books num">
+          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread 3.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">TAMU −3.5</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Total 170.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">170.5</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="cons">Consensus: Texas A&amp;M −3.5 / 170.5.</div></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>UConn vs. Duke</h3><span class="grade nobet">Live · No Bet</span></div>
+        <p class="when num">LIVE — Tipped 6:00 PM CST · Prime Video · T-Mobile Arena, Las Vegas (neutral) · UConn 4–1 · Duke 4–2</p>
+        <p class="when num">Not in Top Picks — game already live at the refresh.</p>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Spread (blend)</span><span class="v">UCONN −1.0</span></div>
+          <div class="cell"><span class="k">Market</span><span class="v">UCONN −1.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">0.5 pts — none</span></div>
+          <div class="cell"><span class="k">Model win prob</span><span class="v">UConn 52%</span></div>
+        </div>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Total (blend)</span><span class="v">145.8</span></div>
+          <div class="cell"><span class="k">Market Total</span><span class="v">145.5 <small>DK</small> · 146.5 <small>FanDuel</small></span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">0.3 pts — none</span></div>
+        </div>
+        <div class="books num">
+          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread 1.5</div><div class="fan"><span class="p">UCONN −1.5 −110</span></div><div><span class="p">UCONN −1.5 −108 ★ BEST</span></div><div><span class="p">UCONN −1.5 −110</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">146 · O −110 / U −110</span></div><div><span class="p">145.5 · O −110 / U −110</span></div><div><span class="p">146.5 · O −110 / U −110</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">UCONN −120 / DUKE +100</span></div><div><span class="p">UCONN −120 / DUKE +100</span></div><div><span class="p">UCONN −120 / DUKE +100</span></div></div>
+          <div class="brow"><div class="cons">Consensus: UConn −1.5 / 145.5 (opened Duke +2.5 / 151.5 at DraftKings).</div></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Washington vs. VCU</h3><span class="grade nobet">No Bet</span></div>
+        <p class="when num">9:00 PM CST · ESPN2 · Lahaina Civic Center, Maui (neutral) · Washington 5–1 · VCU 4–2</p>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Spread (blend)</span><span class="v">VCU −4.3</span></div>
+          <div class="cell"><span class="k">Market</span><span class="v">VCU −3.5 <small>DK</small></span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">0.8 pts — none</span></div>
+          <div class="cell"><span class="k">Model win prob</span><span class="v">VCU 64%</span></div>
+        </div>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Total (blend)</span><span class="v">146.2</span></div>
+          <div class="cell"><span class="k">Market Total</span><span class="v">144.5 <small>DK</small></span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">1.7 pts — below bar</span></div>
+        </div>
+        <div class="books num">
+          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">VCU −3.5 −115 ★ BEST</span></div><div><span class="p">WASH +4.5 −114</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">144.5 −110</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">VCU −185</span></div><div><span class="p">WASH +155 ★ BEST</span> / <span class="unv">VCU UNVERIFIED</span></div></div>
+          <div class="brow"><div class="cons">Consensus: VCU −3.5 / 144.5 (opened −3.5 / 147.5).</div></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><h3>Grand Canyon vs. Colorado</h3><span class="grade nobet">No Bet</span></div>
+        <p class="when num">8:30 PM CST · CBS Sports Network · Acrisure Arena, Palm Springs (neutral) · Grand Canyon 5–0 · Colorado 3–3</p>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Spread (blend)</span><span class="v">GCU −8.6</span></div>
+          <div class="cell"><span class="k">Market</span><span class="v">GCU −9.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">0.9 pts — none</span></div>
+          <div class="cell"><span class="k">Model win prob</span><span class="v">Grand Canyon 76%</span></div>
+        </div>
+        <div class="mynum num">
+          <div class="cell"><span class="k">My Total (blend)</span><span class="v">154.9</span></div>
+          <div class="cell"><span class="k">Market Total</span><span class="v">154.5</span></div>
+          <div class="cell"><span class="k">Edge</span><span class="v edge-nil">0.4 pts — none</span></div>
+        </div>
+        <div class="books num">
+          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread 9.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Total 154.5</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="unv">UNVERIFIED</span></div><div><span class="p">COLO +390 ★ BEST</span> / <span class="unv">GCU UNVERIFIED</span></div><div><span class="unv">UNVERIFIED</span></div></div>
+          <div class="brow"><div class="cons">Consensus: Grand Canyon −9.5 / 154.5.</div></div>
+        </div>
+      </article>
+
+      <section class="glance">
+        <h2>Also Wednesday — Not Graded</h2>
+        <ul class="num">
+          <li><span class="t">Final</span> — Virginia 60, Marquette 54 (Atlantis) · LSU 94, Arizona State 92 (2OT) (Acrisure) · Gonzaga 101, Kansas State 61 (Players Era)</li>
+          <li><span class="t">Live</span> — South Carolina vs. USC · Southern at Nebraska · UAlbany at Syracuse · Northeastern at Wisconsin</li>
+          <li><span class="t">9:30 PM</span> — Jacksonville State vs. Pacific (Las Vegas)</li>
+          <li><span class="t">10:59 PM</span> — Incarnate Word at Hawai'i</li>
+        </ul>
+      </section>
+
+      <footer><p><span class="age">21+.</span></p></footer>
+    </main>
+  </body>
+</html>
