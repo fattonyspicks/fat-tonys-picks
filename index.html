@@ -81,14 +81,8 @@
       .sec-head .rule{flex:1;height:2px;background:var(--gold);min-width:40px;align-self:center;opacity:.85}
       .sec-sub{color:var(--muted);font-size:16px;margin:0 0 22px;max-width:64ch}
 
-      /* strong picks strip — full-width ticker band, directly under the hero */
-      .strong-band{background:var(--surface-2);border-bottom:1px solid var(--line);padding:20px 0 22px}
-      .strong-in{padding:0 20px}
-      .strong-band .sec-head{margin-bottom:4px}
-      .strong-band .sec-head h2{font-size:clamp(24px,3.4vw,32px)}
-      .strong-band .sec-sub{margin-bottom:14px}
+      /* strong picks — contained section, one compact line per pick */
       .strong-list{display:grid;grid-template-columns:1fr;gap:8px}
-      @media (min-width:1200px){ .strong-list{grid-template-columns:repeat(2,1fr)} }
       .strong-row{display:flex;align-items:center;flex-wrap:nowrap;gap:6px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:6px 9px;box-shadow:var(--shadow);text-decoration:none;line-height:1.25;min-height:0;overflow:hidden}
       .strong-row:hover{border-color:var(--line-strong)}
       .strong-row .rank{font-family:"Barlow Condensed",sans-serif;font-size:17px;font-weight:700;color:var(--gold);width:13px;text-align:center;flex-shrink:0;line-height:1}
@@ -101,7 +95,6 @@
       .price b{display:inline;font-size:13.5px;color:var(--ink)}
       .price span{font-size:10.5px;color:var(--muted)}
       @media (max-width:620px){
-        .strong-in{padding:0 12px}
         .strong-row{gap:5px;padding:6px 8px}
         .strong-row .rank{font-size:15px;width:11px}
         .strong-row .pick b{font-size:12.5px;letter-spacing:-.02em}
@@ -214,10 +207,9 @@
       </div>
     </div>
 
-    <!-- STRONG PICKS — full-width strip directly under the hero -->
-    <div class="strong-band">
-      <div class="strong-in">
-      <section id="strong" aria-labelledby="strong-h">
+    <main class="wrap">
+      <!-- STRONG PICKS -->
+      <section class="block" id="strong" aria-labelledby="strong-h">
         <div class="sec-head"><h2 id="strong-h">Today's Strong Picks</h2><span class="rule" aria-hidden="true"></span></div>
         <p class="sec-sub">The best of Wednesday, November 25 — refreshed 4:00 PM CST. Strong means High confidence: the model's number clears the market by a real edge at a verified price.</p>
         <div class="strong-list">
@@ -254,7 +246,7 @@
           </a>
           <a class="strong-row" href="strong-picks.html">
             <span class="rank" aria-hidden="true">6</span>
-            <span class="pick"><b>Colorado State +3.5</b></span>
+            <span class="pick"><b>Colorado State +3.5 vs Clemson</b></span>
             <span class="price"><b>−115</b><span>FanDuel</span></span>
             <span class="sport">College Basketball</span>
             <span class="tag">Strong · High</span>
@@ -262,10 +254,7 @@
         </div>
         <p class="strong-note">That's the full card — all six of tonight's Strong picks are above. The full board carries the model number vs the market and the size of each edge. <a href="strong-picks.html"><b>See all Strong Picks →</b></a></p>
       </section>
-      </div>
-    </div>
 
-    <main class="wrap">
       <!-- BOARDS -->
       <section class="block" id="boards" aria-labelledby="boards-h">
         <div class="sec-head"><h2 id="boards-h">The Boards</h2><span class="rule" aria-hidden="true"></span></div>
