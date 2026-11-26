@@ -78,6 +78,7 @@
       .sec-head h2{font-size:clamp(28px,4vw,38px);font-weight:700;text-transform:uppercase;letter-spacing:.02em;margin:0;line-height:1}
       .sec-head .rule{flex:1;height:2px;background:var(--gold);min-width:40px;align-self:center;opacity:.85}
       .sec-sub{color:var(--muted);font-size:16px;margin:0 0 22px;max-width:64ch}
+      .sec-sub.wide{max-width:none}
 
       /* strong picks — contained section, one compact line per pick */
       .strong-list{display:grid;grid-template-columns:1fr;gap:8px}
@@ -258,7 +259,7 @@
       <!-- BOARDS -->
       <section class="block" id="boards" aria-labelledby="boards-h">
         <div class="sec-head"><h2 id="boards-h">The Boards</h2><span class="rule" aria-hidden="true"></span></div>
-        <p class="sec-sub">One living board per sport, updated in place all season. Top picks up top, every game card below — spreads, totals, moneylines, player props and touchdown scorers, each with the best verified price across the three books.</p>
+        <p class="sec-sub wide">One board per sport, updated all season. Top picks up top, every game below — spreads, totals, moneylines, props and touchdown scorers, each at the best verified price across the three books.</p>
         <div class="filters" role="group" aria-label="Filter boards">
           <button type="button" data-filter="all" aria-pressed="true">All boards</button>
           <button type="button" data-filter="football" aria-pressed="false">Football</button>
