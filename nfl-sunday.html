@@ -90,6 +90,7 @@ footer a{word-break:break-word}
 .tp-sub h3{font-size:18.2px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
 .tp-sub h3 span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .pick{display:grid;grid-template-columns:38px 1fr auto;gap:12px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line)}
+@media (max-width:640px){ .pick{grid-template-columns:38px 1fr} .pick-tags{grid-column:2;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-items:flex-start;text-align:left} }
 .pick:last-of-type{border-bottom:0}
 .rank{font-family:"Barlow Condensed",sans-serif;font-size:21.6px;font-weight:800;line-height:1;background:var(--green);color:#fff;width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center}
 @media(prefers-color-scheme:dark){.rank{background:var(--green2);color:#0d1511}}
@@ -146,20 +147,21 @@ footer a{word-break:break-word}
 .books{margin-top:10px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
 .book-row{display:grid;grid-template-columns:118px 1fr auto;gap:10px;align-items:center;padding:8px 10px;border-bottom:1px solid var(--line);font-size:11.6px;background:var(--surface)}
 .book-row:last-child{border-bottom:0}
-.book-row.primary{background:var(--gold-bg);border-left:4px solid var(--gold)}
+
 .book-row .bname{font-weight:800;font-size:10.3px;letter-spacing:.06em;text-transform:uppercase}
-.book-row.primary .bname{color:var(--gold)}
+
 .book-row .bprice{font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:12.5px}
 .book-row .btime{color:var(--muted);font-size:10.3px;text-align:right;line-height:1.35}
 .best-pill{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--green);color:#fff;padding:3px 6px;border-radius:999px;white-space:nowrap}
 @media(prefers-color-scheme:dark){.best-pill{color:#0d1511}}
-.primary-pill{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--ink);color:var(--bg);padding:3px 6px;border-radius:999px;white-space:nowrap}
+
 .consensus{font-size:11.2px;color:var(--muted);margin-top:8px}
 .consensus b{color:var(--ink)}
 @media(max-width:560px){.book-row{grid-template-columns:1fr auto}.book-row .btime{grid-column:1/-1;text-align:left}}
 /* V2 TABLE */
 .v2wrap{overflow:hidden}
 table.v2{width:100%;border-collapse:collapse;font-size:11.6px}
+@media (max-width:640px){ table.v2{ display:block; overflow-x:auto; } }
 @media(max-width:640px){table.v2{font-size:10.8px}table.v2 th,table.v2 td{padding:7px 5px}table.v2 th:nth-child(3),table.v2 td:nth-child(3){display:none}}
 table.v2 th{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:left;padding:8px;border-bottom:2px solid var(--line)}
 table.v2 td{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
@@ -223,8 +225,8 @@ table.v2 td.num,table.v2 th.num{font-family:"IBM Plex Mono",monospace;text-align
         <div class="pick-main">Washington Commanders −6.5 vs Arizona Cardinals — Best: DraftKings −118
           <small>Washington at Arizona · Sun 3:25 p.m. CST · My Number WAS −14.6 vs market −6.5 = +8.1 pts · ML no-vig WAS 74.8% vs My 82.5% → EV +$0.060 · Wednesday model blend — no Thursday model update published · DraftKings verified live Thu morning CST · 1 unit</small>
           <div class="books" role="table" aria-label="Washington spread three-book prices">
-            <div class="book-row primary"><span class="bname">Fanatics ★ Primary</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">WAS −6.5 −118 <span class="best-pill">Best verified</span></span><span class="btime">Verified live Thu morning CST</span></div>
+            <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">UNVERIFIED — live page blank Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
           </div>
         </div>
@@ -235,8 +237,8 @@ table.v2 td.num,table.v2 th.num{font-family:"IBM Plex Mono",monospace;text-align
         <div class="pick-main">Houston Texans −6.5 vs Baltimore Ravens — Best: DraftKings −112
           <small>Baltimore at Houston · Sun 12:00 p.m. CST · My Number HOU −11.7 = +5.2 pts on paper, HELD at Lean — Derrick Henry's Thursday protocol status is unresolved (Wed: limited, expected to play; no Thu update) · ML EV +$0.015, thin · DraftKings verified live Thu morning CST · 0.5 unit or pass</small>
           <div class="books" role="table" aria-label="Houston spread three-book prices">
-            <div class="book-row primary"><span class="bname">Fanatics ★ Primary</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">HOU −6.5 −112 <span class="best-pill">Best verified</span></span><span class="btime">Verified live Thu morning CST</span></div>
+            <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">UNVERIFIED — live page blank Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
           </div>
         </div>
@@ -247,8 +249,8 @@ table.v2 td.num,table.v2 th.num{font-family:"IBM Plex Mono",monospace;text-align
         <div class="pick-main">Under 47.5 — Baltimore Ravens at Houston Texans — Best: DraftKings −113
           <small>Sun 12:00 p.m. CST · My Total 43 vs 47.5 = +4.5 pts to the Under · Held at Lean — the total is a Wednesday model figure with no Thursday corroboration, and Henry's status moves this number both ways · DraftKings verified live Thu morning CST · 0.5 unit or pass</small>
           <div class="books" role="table" aria-label="Baltimore Houston total three-book prices">
-            <div class="book-row primary"><span class="bname">Fanatics ★ Primary</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">Under 47.5 −113 <span class="best-pill">Best verified</span></span><span class="btime">Verified live Thu morning CST</span></div>
+            <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">UNVERIFIED — live page blank Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
           </div>
         </div>
@@ -259,8 +261,8 @@ table.v2 td.num,table.v2 th.num{font-family:"IBM Plex Mono",monospace;text-align
         <div class="pick-main">Miami Dolphins — Moneyline +183 vs New York Jets — Best: DraftKings +183
           <small>NY Jets at Miami · Sun 12:00 p.m. CST · Unchanged from Wednesday · My NYJ win prob 62% → MIA 38% → EV +$0.075 · The value is ML-only — the spread (+4.5) grades the other way on My Number · DraftKings verified live Thu morning CST · 0.5 unit or pass</small>
           <div class="books" role="table" aria-label="Miami moneyline three-book prices">
-            <div class="book-row primary"><span class="bname">Fanatics ★ Primary</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">MIA ML +183 <span class="best-pill">Best verified</span></span><span class="btime">Verified live Thu morning CST</span></div>
+            <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">UNVERIFIED — live page blank Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
           </div>
         </div>
@@ -271,8 +273,8 @@ table.v2 td.num,table.v2 th.num{font-family:"IBM Plex Mono",monospace;text-align
         <div class="pick-main">Jacksonville Jaguars −14.5 vs Tennessee Titans — Best: DraftKings −104
           <small>Tennessee at Jacksonville · Sun 12:00 p.m. CST · My Number JAX −17.1 vs −14.5 = +2.6 pts, Lean band · CAVEAT: Bhayshul Tuten (JAX lead RB) DNP Wed and his Thursday status is UNVERIFIED — if he is out, pass this Lean · DraftKings verified live Thu morning CST · 0.5 unit or pass</small>
           <div class="books" role="table" aria-label="Jacksonville spread three-book prices">
-            <div class="book-row primary"><span class="bname">Fanatics ★ Primary</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">JAX −14.5 −104 <span class="best-pill">Best verified</span></span><span class="btime">Verified live Thu morning CST</span></div>
+            <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">UNVERIFIED — live page blank Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
           </div>
         </div>
@@ -283,8 +285,8 @@ table.v2 td.num,table.v2 th.num{font-family:"IBM Plex Mono",monospace;text-align
         <div class="pick-main">Atlanta Falcons +7 at Minnesota Vikings — Best: DraftKings −119
           <small>Atlanta at Minnesota · Sun 12:00 p.m. CST · My Number MIN −3.7 vs market −7 = +3.3 pts to Atlanta · Capped at Lean — the Wednesday models were split on this game (DAEPA/DepthRoom −6.8) · DraftKings verified live Thu morning CST · 0.5 unit or pass</small>
           <div class="books" role="table" aria-label="Atlanta spread three-book prices">
-            <div class="book-row primary"><span class="bname">Fanatics ★ Primary</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">ATL +7 −119 <span class="best-pill">Best verified</span></span><span class="btime">Verified live Thu morning CST</span></div>
+            <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">UNVERIFIED — live page blank Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
           </div>
         </div>
@@ -295,8 +297,8 @@ table.v2 td.num,table.v2 th.num{font-family:"IBM Plex Mono",monospace;text-align
         <div class="pick-main">San Francisco 49ers — Moneyline −154 vs Seattle Seahawks — Best: DraftKings −154 — ONLY IF PURDY PLAYS
           <small>Seattle at San Francisco · Sun 3:25 p.m. CST · CONDITIONAL — Purdy's Thursday practice report was NOT yet published Thu morning (latest: Wed DNP, ankle, day-to-day), so this cannot be confirmed or upgraded today · Price moved −147 → −154 · My Number is DraftBuzz-only (SF −10.1) and ignores the ankle; DAEPA held the game · If Mac Jones starts: PASS entirely · DraftKings verified live Thu morning CST</small>
           <div class="books" role="table" aria-label="San Francisco moneyline three-book prices">
-            <div class="book-row primary"><span class="bname">Fanatics ★ Primary</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">SF ML −154 <span class="best-pill">Best verified</span></span><span class="btime">Verified live Thu morning CST</span></div>
+            <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">UNVERIFIED — no live odds board Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
             <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">UNVERIFIED — live page blank Thu morning</span><span class="btime">Thu Nov 26 · not live-verified</span></div>
           </div>
         </div>
