@@ -85,6 +85,7 @@
       .strong-list{display:grid;grid-template-columns:1fr;gap:8px}
       .strong-row{display:flex;align-items:center;flex-wrap:nowrap;gap:6px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:8px;padding:6px 9px;box-shadow:var(--shadow);text-decoration:none;line-height:1.25;min-height:0;overflow:hidden}
       .strong-row:hover{border-color:var(--line-strong)}
+      .strong-row.no-pick{border-left-color:var(--line-strong);color:var(--muted);font-size:13.5px;font-weight:600}
       .strong-row .rank{font-family:"Barlow Condensed",sans-serif;font-size:17px;font-weight:700;color:var(--gold);width:13px;text-align:center;flex-shrink:0;line-height:1}
       .strong-row .pick{display:block;flex:0 1 auto;min-width:0;overflow:hidden}
       .strong-row .pick b{display:block;font-size:13.5px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -239,7 +240,12 @@
             <span class="sport">College Football</span>
             <span class="tag">Strong · High</span>
           </a>
-          <div class="sport-divider">College Basketball</div>
+                    <div class="sport-divider">NBA</div>
+          <div class="strong-row no-pick">
+            <span class="pick">No Strong picks</span>
+            <span class="sport">NBA</span>
+          </div>
+<div class="sport-divider">College Basketball</div>
           <a class="strong-row" href="college-basketball.html">
             <span class="rank" aria-hidden="true">1</span>
             <span class="pick"><b>Under 170.5 — Miami (FL) vs Alabama</b></span>
