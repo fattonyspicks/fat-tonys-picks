@@ -106,6 +106,8 @@
         .price span{font-size:10px}
       }
       @media (max-width:400px){ .strong-row .pick b{font-size:12px} }
+      .sport-divider{display:flex;align-items:center;gap:10px;padding:12px 2px 0;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+      .sport-divider::after{content:"";flex:1;height:1px;background:var(--line-strong)}
       .strong-note{font-size:14px;color:var(--muted);margin:12px 2px 0}
       .defs{font-size:14px;color:var(--muted);margin:0 0 18px;max-width:none;line-height:1.55}
       .tag.lean{background:transparent;color:var(--muted);border-color:var(--line-strong)}
@@ -206,6 +208,7 @@
         <div class="sec-head"><h2 id="strong-h">Today's Strong Picks</h2><span class="rule" aria-hidden="true"></span></div>
         <p class="sec-sub wide lead">Refreshed daily at 4:45 PM CST — Strong means High confidence: the model's number clears the market by a real edge at a verified price, clearing the high bar at 3+ points on spreads, totals and moneylines and 5+ on props, and <a href="#method">The Method</a> breaks down how that number is built.</p>
         <div class="strong-list">
+          <div class="sport-divider">NFL</div>
           <a class="strong-row" href="strong-picks.html">
             <span class="rank" aria-hidden="true">1</span>
             <span class="pick"><b>Washington Commanders −6.5 vs Arizona Cardinals</b></span>
@@ -213,6 +216,7 @@
             <span class="sport">NFL</span>
             <span class="tag">Strong · High</span>
           </a>
+          <div class="sport-divider">College Football</div>
           <a class="strong-row" href="strong-picks.html">
             <span class="rank" aria-hidden="true">2</span>
             <span class="pick"><b>Texas −11 at Texas A&amp;M</b></span>
@@ -227,6 +231,7 @@
             <span class="sport">College Football</span>
             <span class="tag">Strong · High</span>
           </a>
+          <div class="sport-divider">College Basketball</div>
           <a class="strong-row" href="strong-picks.html">
             <span class="rank" aria-hidden="true">4</span>
             <span class="pick"><b>Under 170.5 — Miami (FL) vs Alabama</b></span>
@@ -264,6 +269,7 @@
         <div class="sec-head"><h2 id="leans-h">Today's Leans</h2><span class="rule" aria-hidden="true"></span></div>
         <p class="defs">Lean — a real but smaller edge of 2–3 points at Medium confidence: a lean, not a lock, and <a href="#method">The Method</a> breaks down how the number is built.</p>
         <div class="strong-list">
+          <div class="sport-divider">NFL</div>
           <a class="strong-row" href="nfl-sunday.html">
             <span class="rank" aria-hidden="true">1</span>
             <span class="pick"><b>Houston Texans −6.5 vs Baltimore Ravens</b></span>
@@ -306,6 +312,7 @@
             <span class="sport">NFL</span>
             <span class="tag lean">Lean · Medium</span>
           </a>
+          <div class="sport-divider">College Football</div>
           <a class="strong-row" href="college-football.html">
             <span class="rank" aria-hidden="true">7</span>
             <span class="pick"><b>West Virginia +26.5 at Utah</b></span>
@@ -341,6 +348,7 @@
             <span class="sport">College Football</span>
             <span class="tag lean">Lean · Medium</span>
           </a>
+          <div class="sport-divider">NBA</div>
           <a class="strong-row" href="nba.html">
             <span class="rank" aria-hidden="true">12</span>
             <span class="pick"><b>Under 225.5 — Atlanta Hawks at Boston Celtics</b></span>
@@ -362,6 +370,7 @@
             <span class="sport">NBA</span>
             <span class="tag lean">Lean · Medium</span>
           </a>
+          <div class="sport-divider">College Basketball</div>
           <a class="strong-row" href="college-basketball.html">
             <span class="rank" aria-hidden="true">15</span>
             <span class="pick"><b>Under 150.5 — Tennessee vs Louisville</b></span>
