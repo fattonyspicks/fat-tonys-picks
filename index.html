@@ -116,6 +116,40 @@
       .sport-divider{display:flex;align-items:center;gap:10px;padding:12px 2px 0;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
       .sport-divider::after{content:"";flex:1;height:1px;background:var(--line-strong)}
       .strong-note{font-size:14px;color:var(--muted);margin:12px 2px 0}
+      .pick-card{display:block;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:14px 16px;box-shadow:var(--shadow);text-decoration:none}
+      .pick-card:hover{border-color:var(--line-strong);border-left-color:var(--gold)}
+      .pc-top{display:flex;align-items:flex-start;gap:10px}
+      .pc-rank{font-family:"Barlow Condensed",sans-serif;font-size:22px;font-weight:700;color:var(--gold);line-height:1;padding-top:2px;flex-shrink:0}
+      .pc-name{font-family:"Barlow Condensed",sans-serif;font-size:23px;font-weight:700;line-height:1.05;letter-spacing:.01em}
+      .pc-name .num{color:var(--green)}
+      .pc-game{font-size:13px;color:var(--ink-2);margin-top:3px;font-weight:500}
+      .pc-badges{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0}
+      .pc-badges .tag{margin-left:0}
+      .pc-unit{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 6px;border-radius:5px;background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line)}
+      .pc-books{margin-top:11px;display:grid;gap:6px}
+      .pc-books-label{font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+      .pc-book{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:13px;min-height:34px}
+      .pc-book .bn{font-weight:700;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+      .pc-book .prim{font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:2px 5px;border-radius:4px;line-height:1}
+      .pc-book .bp{font-weight:700;text-align:right;display:flex;align-items:center;gap:7px;flex-wrap:wrap;justify-content:flex-end}
+      .pc-book .bp .on{font-weight:500;font-size:12px;color:var(--muted)}
+      .pc-book .best{color:var(--green);font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+      .pc-book .unv{font-size:10.5px;font-weight:700;letter-spacing:.05em;color:var(--gold);border:1px dashed var(--gold);padding:3px 7px;border-radius:5px}
+      .pc-nums{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+      .pc-nums .c{background:var(--surface-2);border:1px solid var(--line);border-radius:8px;padding:7px 10px;min-width:0}
+      .pc-nums .k{display:block;font-size:9.8px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+      .pc-nums .v{display:block;font-weight:700;font-size:14px;line-height:1.25}
+      .pc-nums .v small{display:block;font-weight:500;font-size:11.5px;color:var(--muted)}
+      .pc-nums .v.edge{color:var(--green)}
+      @media (max-width:620px){ .pc-nums{grid-template-columns:repeat(2,1fr)} .pc-name{font-size:21px} }
+      .pc-why{margin-top:11px}
+      .pc-why h4{margin:0 0 4px;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+      .pc-why ul{margin:0;padding:0;list-style:none}
+      .pc-why li{position:relative;padding:2px 0 2px 15px;font-size:13.5px;color:var(--ink-2);line-height:1.45}
+      .pc-why li::before{content:"";position:absolute;left:1px;top:9px;width:6px;height:6px;border-radius:2px;background:var(--gold)}
+      .pc-why li b{color:var(--ink)}
+      .pc-note{background:var(--surface);border:1px dashed var(--line-strong);border-radius:10px;padding:11px 14px;font-size:13.5px;color:var(--ink-2);line-height:1.45}
+      .pc-note b{color:var(--ink)}
       .defs{font-size:14px;color:var(--muted);margin:0 0 18px;max-width:none;line-height:1.55}
       .tag.lean{background:transparent;color:var(--muted);border-color:var(--line-strong)}
 
@@ -216,59 +250,202 @@
         <p class="sec-sub wide lead">Refreshed daily at 4:45 PM CST — Strong means High confidence: the model's number clears the market by a real edge at a verified price, clearing the high bar at 3+ points on spreads, totals and moneylines and 5+ on props, and <a href="#method">The Method</a> breaks down how that number is built.</p>
         <div class="strong-list">
           <div class="sport-divider">NFL</div>
-          <a class="strong-row" href="strong-picks.html">
-            <span class="rank" aria-hidden="true">1</span>
-            <span class="pick"><b>Washington Commanders −6.5 vs Arizona Cardinals</b></span>
-            <span class="price"><b>−118</b><span>DraftKings</span></span>
-            <span class="sport">NFL</span>
-            <span class="tag">Strong · High</span>
+          <div class="pc-note"><b>Fri Nov 27 · Black Friday</b> — no Strong pick. Steelers +4.5 vs Broncos and Steelers ML +190 vs Broncos are graded Lean (quarterback caveat — Rudolph starts), and Nebraska +3.5 at Iowa is a Lean.</div>
+          <a class="pick-card" href="nfl-sunday.html">
+            <div class="pc-top">
+              <span class="pc-rank" aria-hidden="true">1</span>
+              <div>
+                <div class="pc-name">Washington Commanders <span class="num">−6.5</span> vs Arizona Cardinals</div>
+                <div class="pc-game"><b>Washington Commanders</b> vs <b>Arizona Cardinals</b> · Sun Nov 29, 3:25 p.m. CST · State Farm Stadium, Glendale</div>
+              </div>
+              <span class="pc-badges"><span class="tag">Strong · High</span><span class="pc-unit">1 unit</span></span>
+            </div>
+            <div class="pc-books">
+              <div class="pc-books-label">Best price — three books</div>
+              <div class="pc-book"><span class="bn">Fanatics <span class="prim">Primary</span></span><span class="bp"><span class="unv">UNVERIFIED — price not available</span></span></div>
+            <div class="pc-book"><span class="bn">DraftKings</span><span class="bp">−118 <span class="on">on Washington −6.5</span> <span class="best">★ Best</span></span></div>
+            <div class="pc-book"><span class="bn">FanDuel</span><span class="bp"><span class="unv">UNVERIFIED — price not available</span></span></div>
+            </div>
+            <div class="pc-nums">
+              <div class="c"><span class="k">My Number — blend</span><span class="v">WAS −14.6</span></div>
+            <div class="c"><span class="k">Market line</span><span class="v">Washington −6.5 <small>DraftKings</small></span></div>
+            <div class="c"><span class="k">Edge</span><span class="v edge">8.1 pts</span></div>
+            <div class="c"><span class="k">Model prob / EV</span><span class="v">82.5% <small>ML EV +$0.060/unit</small></span></div>
+            </div>
+            <div class="pc-why"><h4>Why it's Strong</h4><ul>
+              <li><b>8.1 points of edge</b> — the model blend makes Washington −14.6 at Arizona against a −6.5 market, and the moneyline check agrees: My 82.5% win probability vs 74.8% no-vig, EV +$0.060 per unit.</li>
+              <li><b>Verified price</b> — DraftKings −118 was read live Thursday morning; Fanatics and FanDuel prices are UNVERIFIED, so DraftKings is the book to use.</li>
+              <li><b>Stated caveat</b> — the blend is Wednesday's published model run; no Thursday model update exists, so the number is carried, not re-derived.</li>
+            </ul></div>
           </a>
+          <div class="pc-note"><b>Sun Nov 29 · Sunday Night Football</b> — Raiders at Browns: no Strong pick — the Sunday Night board grades every team market No Bet; its only plays are two Leans on Brock Bowers (price UNVERIFIED, and Bowers is Questionable).</div>
+          <div class="pc-note"><b>Mon Nov 30 · Monday Night Football</b> — Panthers at Buccaneers: no Strong pick — the Monday Night board grades every team market No Bet, and its three player-prop Leans all carry UNVERIFIED prices.</div>
           <div class="sport-divider">College Football</div>
-          <a class="strong-row" href="strong-picks.html">
-            <span class="rank" aria-hidden="true">1</span>
-            <span class="pick"><b>Texas −11 at Texas A&amp;M</b></span>
-            <span class="price"><b>−110</b><span>Fanatics</span></span>
-            <span class="sport">College Football</span>
-            <span class="tag">Strong · High</span>
+          <a class="pick-card" href="college-football.html">
+            <div class="pc-top">
+              <span class="pc-rank" aria-hidden="true">1</span>
+              <div>
+                <div class="pc-name">Texas <span class="num">−11</span> at Texas A&amp;M</div>
+                <div class="pc-game"><b>Texas</b> at <b>Texas A&amp;M</b> · Fri Nov 27, 6:30 p.m. CST</div>
+              </div>
+              <span class="pc-badges"><span class="tag">Strong · High</span><span class="pc-unit">1 unit</span></span>
+            </div>
+            <div class="pc-books">
+              <div class="pc-books-label">Best price — three books</div>
+              <div class="pc-book"><span class="bn">Fanatics <span class="prim">Primary</span></span><span class="bp">−110 <span class="on">on Texas −11</span> <span class="best">★ Best line</span></span></div>
+            <div class="pc-book"><span class="bn">DraftKings</span><span class="bp">−108 <span class="on">on Texas −11.5</span></span></div>
+            <div class="pc-book"><span class="bn">FanDuel</span><span class="bp">−106 <span class="on">on Texas −11.5</span></span></div>
+            </div>
+            <div class="pc-nums">
+              <div class="c"><span class="k">My Number</span><span class="v">TEX −16.1 <small>SP+ −18.1 / FPI −14.1</small></span></div>
+            <div class="c"><span class="k">Market line</span><span class="v">Texas −11 <small>Fanatics</small></span></div>
+            <div class="c"><span class="k">Edge</span><span class="v edge">+5.1 pts <small>My Number vs market</small><small>+15.3 pp probability edge · Cover prob 65.3%</small></span></div>
+            <div class="c"><span class="k">EV</span><span class="v">+$0.25/$1</span></div>
+            </div>
+            <div class="pc-why"><h4>Why it's Strong</h4><ul>
+              <li><b>Both models sit past the market</b> — SP+ −18.1 and FPI −14.1 against a −11 market; My Number −16.1 gives +5.1 pts of edge.</li>
+              <li><b>Fanatics holds the best line</b> — −11, a half-point better than the −11.5 at DraftKings and FanDuel (DraftKings' −10.5 is gone).</li>
+              <li><b>Matchup support (RG.org)</b> — Texas A&amp;M is 4-7 with QB Marcel Reed throwing more interceptions (9) than touchdowns (8); Texas allows 16.5 points/game.</li>
+            </ul></div>
           </a>
-          <a class="strong-row" href="strong-picks.html">
-            <span class="rank" aria-hidden="true">2</span>
-            <span class="pick"><b>Miami −25 vs Boston College</b></span>
-            <span class="price"><b>−110</b><span>Fanatics</span></span>
-            <span class="sport">College Football</span>
-            <span class="tag">Strong · High</span>
+          <a class="pick-card" href="college-football.html">
+            <div class="pc-top">
+              <span class="pc-rank" aria-hidden="true">2</span>
+              <div>
+                <div class="pc-name">Miami <span class="num">−25</span> vs Boston College</div>
+                <div class="pc-game"><b>Boston College</b> at <b>Miami</b> · Sat Nov 28, 11:00 a.m. CST</div>
+              </div>
+              <span class="pc-badges"><span class="tag">Strong · High</span><span class="pc-unit">1 unit</span></span>
+            </div>
+            <div class="pc-books">
+              <div class="pc-books-label">Best price — three books</div>
+              <div class="pc-book"><span class="bn">Fanatics <span class="prim">Primary</span></span><span class="bp">−110 <span class="on">on Miami −25</span> <span class="best">★ Best line</span></span></div>
+            <div class="pc-book"><span class="bn">DraftKings</span><span class="bp">−115 <span class="on">on Miami −24.5</span></span></div>
+            <div class="pc-book"><span class="bn">FanDuel</span><span class="bp">−115 <span class="on">on Miami −24.5</span></span></div>
+            </div>
+            <div class="pc-nums">
+              <div class="c"><span class="k">My Number</span><span class="v">MIA −29.0 <small>SP+ −29.7 / FPI −32.8</small></span></div>
+            <div class="c"><span class="k">Market line</span><span class="v">Miami −25 <small>Fanatics</small></span></div>
+            <div class="c"><span class="k">Edge</span><span class="v edge">+4.0 pts <small>My Number vs market</small><small>+12.1 pp probability edge · Cover prob 62.1%</small></span></div>
+            <div class="c"><span class="k">EV</span><span class="v">+$0.19/$1</span></div>
+            </div>
+            <div class="pc-why"><h4>Why it's Strong</h4><ul>
+              <li><b>Both models clear the market even after the haircut</b> — raw My Number −31.25 was cut to −29.0 with WR Malachi Toney doubtful (ACC availability report, Wed Nov 25).</li>
+              <li><b>Fanatics holds the best line</b> — −25, a full half-point better than the −24.5 at DraftKings and FanDuel.</li>
+              <li><b>Toney's role is covered</b> — Cooper Barkate has averaged 7.3 catches/game over the last three (CBS Sports).</li>
+            </ul></div>
           </a>
+          <div class="pc-note"><b>Tennessee −13.5 at Vanderbilt</b> — labelled Strong on the College Football board but capped at Medium confidence (model spread 6.5 pts, RB DeSean Bishop questionable), so it does not count here.</div>
+          <div class="sport-divider">NBA</div>
+          <div class="pc-note"><b>Fri Nov 27</b> — no Strong pick. The NBA board's only plays are three team Leans, all Medium (Utah +10 vs Denver, Over 217.5 Golden State at Portland, Under 225.5 Atlanta at Boston), and no player prop clears the bar.</div>
+          <div class="pc-note"><b>Sat Nov 28 – Mon Nov 30</b> — the NBA board refreshes daily; no Strong pick is posted yet for those days.</div>
           <div class="sport-divider">College Basketball</div>
-          <a class="strong-row" href="strong-picks.html">
-            <span class="rank" aria-hidden="true">1</span>
-            <span class="pick"><b>Under 170.5 — Miami (FL) vs Alabama</b></span>
-            <span class="price"><b>−110</b><span>Fanatics</span></span>
-            <span class="sport">College Basketball</span>
-            <span class="tag">Strong · High</span>
+          <a class="pick-card" href="college-basketball.html">
+            <div class="pc-top">
+              <span class="pc-rank" aria-hidden="true">1</span>
+              <div>
+                <div class="pc-name">Under <span class="num">170.5</span> — Miami (FL) vs Alabama</div>
+                <div class="pc-game"><b>Miami (FL)</b> vs <b>Alabama</b> · Fri Nov 27, 7:30 p.m. CST · Players Era, Las Vegas</div>
+              </div>
+              <span class="pc-badges"><span class="tag">Strong · High</span><span class="pc-unit">1 unit</span></span>
+            </div>
+            <div class="pc-books">
+              <div class="pc-books-label">Best price — three books</div>
+              <div class="pc-book"><span class="bn">Fanatics <span class="prim">Primary</span></span><span class="bp">−110 <span class="on">on Under 170.5</span> <span class="best">★ Best</span></span></div>
+            <div class="pc-book"><span class="bn">DraftKings</span><span class="bp">−110 <span class="on">on Under 170.5</span></span></div>
+            <div class="pc-book"><span class="bn">FanDuel</span><span class="bp">−110 <span class="on">on Under 170.5</span></span></div>
+            </div>
+            <div class="pc-nums">
+              <div class="c"><span class="k">My Total — blend</span><span class="v">165.0</span></div>
+            <div class="c"><span class="k">Market line</span><span class="v">Under 170.5 <small>Fanatics</small></span></div>
+            <div class="c"><span class="k">Edge</span><span class="v edge">5.5 pts</span></div>
+            <div class="c"><span class="k">Model prob / EV</span><span class="v">59% <small>EV +12.7% at −110</small></span></div>
+            </div>
+            <div class="pc-why"><h4>Why it's Strong</h4><ul>
+              <li><b>5.5 points clear of the market</b> — My Total 165.0 against a 170.5 market, priced −110 at all three books.</li>
+              <li><b>Thinner support, stated plainly</b> — the blend is two models: Bleacher Nation's 161 is the driver, Sportsbook Wire says 169. The board still grades it Strong · High.</li>
+            </ul></div>
           </a>
-          <a class="strong-row" href="strong-picks.html">
-            <span class="rank" aria-hidden="true">2</span>
-            <span class="pick"><b>Tennessee +3.5 vs Louisville</b></span>
-            <span class="price"><b>−107</b><span>DraftKings</span></span>
-            <span class="sport">College Basketball</span>
-            <span class="tag">Strong · High</span>
+          <a class="pick-card" href="college-basketball.html">
+            <div class="pc-top">
+              <span class="pc-rank" aria-hidden="true">2</span>
+              <div>
+                <div class="pc-name">Tennessee <span class="num">+3.5</span> vs Louisville</div>
+                <div class="pc-game"><b>Tennessee</b> vs <b>Louisville</b> · Fri Nov 27, 8:00 p.m. CST · Players Era final, Las Vegas</div>
+              </div>
+              <span class="pc-badges"><span class="tag">Strong · High</span><span class="pc-unit">1 unit</span></span>
+            </div>
+            <div class="pc-books">
+              <div class="pc-books-label">Best price — three books</div>
+              <div class="pc-book"><span class="bn">Fanatics <span class="prim">Primary</span></span><span class="bp"><span class="unv">UNVERIFIED</span> <span class="on">on Tennessee +3.5</span></span></div>
+            <div class="pc-book"><span class="bn">DraftKings</span><span class="bp">−107 <span class="on">on Tennessee +3.5</span> <span class="best">★ Best</span></span></div>
+            <div class="pc-book"><span class="bn">FanDuel</span><span class="bp"><span class="unv">UNVERIFIED</span> <span class="on">on Tennessee +3.5</span></span></div>
+            </div>
+            <div class="pc-nums">
+              <div class="c"><span class="k">My Number — blend</span><span class="v">TENN −1.4</span></div>
+            <div class="c"><span class="k">Market line</span><span class="v">Tennessee +3.5 <small>DraftKings</small></span></div>
+            <div class="c"><span class="k">Edge</span><span class="v edge">4.9 pts</span></div>
+            <div class="c"><span class="k">Model prob / EV</span><span class="v">58.5% <small>Dimers · EV +11.9% at −107</small></span></div>
+            </div>
+            <div class="pc-why"><h4>Why it's Strong</h4><ul>
+              <li><b>My Number makes Tennessee the favorite</b> — −1.4 against a +3.5 market at DraftKings, a 4.9-pt edge; Dimers agrees at 58.5% to cover.</li>
+              <li><b>Louisville is short-handed</b> — G De'Shayne Montgomery is OUT, C Gabe Dynes is out for the season, and G Isaac Ellis is doubtful.</li>
+            </ul></div>
           </a>
-          <a class="strong-row" href="strong-picks.html">
-            <span class="rank" aria-hidden="true">3</span>
-            <span class="pick"><b>Under 149.5 — West Virginia vs North Carolina</b></span>
-            <span class="price"><b>−110</b><span>DraftKings</span></span>
-            <span class="sport">College Basketball</span>
-            <span class="tag">Strong · High</span>
+          <a class="pick-card" href="college-basketball.html">
+            <div class="pc-top">
+              <span class="pc-rank" aria-hidden="true">3</span>
+              <div>
+                <div class="pc-name">Under <span class="num">149.5</span> — West Virginia vs North Carolina</div>
+                <div class="pc-game"><b>West Virginia</b> vs <b>North Carolina</b> · Fri Nov 27, 6:00 p.m. CST · Neutral site</div>
+              </div>
+              <span class="pc-badges"><span class="tag">Strong · High</span><span class="pc-unit">1 unit</span></span>
+            </div>
+            <div class="pc-books">
+              <div class="pc-books-label">Best price — three books</div>
+              <div class="pc-book"><span class="bn">Fanatics <span class="prim">Primary</span></span><span class="bp">−110 <span class="on">on Under 149</span></span></div>
+            <div class="pc-book"><span class="bn">DraftKings</span><span class="bp">−110 <span class="on">on Under 149.5</span> <span class="best">★ Best</span></span></div>
+            <div class="pc-book"><span class="bn">FanDuel</span><span class="bp">−110 <span class="on">on Under 149.5</span> <span class="best">★ Best</span></span></div>
+            </div>
+            <div class="pc-nums">
+              <div class="c"><span class="k">My Total — blend</span><span class="v">146.3</span></div>
+            <div class="c"><span class="k">Market line</span><span class="v">Under 149.5 <small>DraftKings / FanDuel</small></span></div>
+            <div class="c"><span class="k">Edge</span><span class="v edge">3.2 pts</span></div>
+            <div class="c"><span class="k">Model prob / EV</span><span class="v">57% <small>EV +8.8% at −110</small></span></div>
+            </div>
+            <div class="pc-why"><h4>Why it's Strong</h4><ul>
+              <li><b>3.2 points clear of the market</b> — My Total 146.3 against 149.5 at DraftKings and FanDuel.</li>
+              <li><b>All three models sit at 149 or lower</b> on this total.</li>
+            </ul></div>
           </a>
-          <a class="strong-row" href="strong-picks.html">
-            <span class="rank" aria-hidden="true">4</span>
-            <span class="pick"><b>Kansas State +9.5 vs Michigan</b></span>
-            <span class="price"><b>−112</b><span>DraftKings</span></span>
-            <span class="sport">College Basketball</span>
-            <span class="tag">Strong · High</span>
+          <a class="pick-card" href="college-basketball.html">
+            <div class="pc-top">
+              <span class="pc-rank" aria-hidden="true">4</span>
+              <div>
+                <div class="pc-name">Kansas State <span class="num">+9.5</span> vs Michigan</div>
+                <div class="pc-game"><b>Kansas State</b> vs <b>Michigan</b> · Fri Nov 27, 4:30 p.m. CST · Players Era, Las Vegas</div>
+              </div>
+              <span class="pc-badges"><span class="tag">Strong · High</span><span class="pc-unit">1 unit</span></span>
+            </div>
+            <div class="pc-books">
+              <div class="pc-books-label">Best price — three books</div>
+              <div class="pc-book"><span class="bn">Fanatics <span class="prim">Primary</span></span><span class="bp">−105 <span class="on">on Kansas State +9</span></span></div>
+            <div class="pc-book"><span class="bn">DraftKings</span><span class="bp">−112 <span class="on">on Kansas State +9.5</span> <span class="best">★ Best</span></span></div>
+            <div class="pc-book"><span class="bn">FanDuel</span><span class="bp">−110 <span class="on">on Kansas State +9.5</span></span></div>
+            </div>
+            <div class="pc-nums">
+              <div class="c"><span class="k">My Number — blend</span><span class="v">MICH −6.5</span></div>
+            <div class="c"><span class="k">Market line</span><span class="v">Kansas State +9.5 <small>DraftKings</small></span></div>
+            <div class="c"><span class="k">Edge</span><span class="v edge">3.0 pts</span></div>
+            <div class="c"><span class="k">Model prob / EV</span><span class="v">56% <small>EV +6.5% at −112</small></span></div>
+            </div>
+            <div class="pc-why"><h4>Why it's Strong</h4><ul>
+              <li><b>Exactly at the 3-pt bar</b> — My Number makes Michigan −6.5 against a −9.5 market, best priced at DraftKings −112.</li>
+              <li><b>Lowest-confidence Strong on the board, stated plainly</b> — the two-model blend splits Michigan −3 / −10.</li>
+            </ul></div>
           </a>
         </div>
-        <p class="strong-note">That's the full card — all seven Strong picks for Thursday through Monday are above. The full board carries the model number vs the market and the size of each edge. <a href="strong-picks.html"><b>See all Strong Picks →</b></a></p>
+
       </section>
 
       <!-- LEANS -->
@@ -530,7 +707,7 @@
       <div class="wrap foot-in">
         <div class="foot-brand">Fat Tony's <em>Picks</em></div>
         <p>Fat Tony's Picks publishes sports analysis and opinions for entertainment. Picks are not a guarantee of any outcome, and no pick here is financial advice. Prices shown on the boards are verified at the time of each refresh and move fast — check your book before you play.</p>
-        <p class="fine">21+ only. If gambling stops being fun, help is available at 1-800-GAMBLER. © 2026 Fat Tony's Picks. League logos are trademarks of their respective leagues, shown for identification only.</p>
+        <p class="fine">21+ only. If gambling stops being fun, help is available at 1-800-GAMBLER. © 2026 Fat Tony's Picks.</p>
       </div>
     </footer>
 
