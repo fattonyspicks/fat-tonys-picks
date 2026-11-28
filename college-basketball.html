@@ -44,6 +44,7 @@
       .top-sec + .top-sec { border-top: 1px solid var(--line); }
       .top-sec h3 { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 12px 0 4px; }
       .pick { display: grid; grid-template-columns: 2rem 1fr auto; gap: 4px 10px; padding: 10px 0; border-bottom: 1px dashed var(--line); align-items: baseline; }
+    @media (max-width: 640px) { .pick { grid-template-columns: 2rem 1fr; } .pick .conf { grid-column: 2; justify-self: start; } .play .price { white-space: normal; } }
       .pick:last-child { border-bottom: 0; }
       .pick .rank { font-family: "Barlow Condensed", sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--accent); }
       .pick .play { font-size: 1.12rem; font-weight: 700; }
@@ -64,6 +65,7 @@
       .card-top { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: flex-start; }
       .card h3 { font-family: "Barlow Condensed", sans-serif; font-size: 1.45rem; font-weight: 700; line-height: 1.05; margin: 0; flex: 1 1 260px; }
       .grade { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 10px; border-radius: 4px; white-space: nowrap; }
+    @media (max-width: 640px) { .grade { white-space: normal; } }
       .grade.strong { background: var(--good-bg); color: var(--good); }
       .grade.lean { background: var(--lean-bg); color: var(--lean); }
       .grade.nobet { background: var(--nobet-bg); color: var(--nobet); }
@@ -81,12 +83,12 @@
       .books .brow > div { padding: 7px 9px; font-size: 0.94rem; }
       .books .brow.head { background: var(--surface-2); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
       .books .brow .mkt { font-weight: 600; color: var(--ink-2); font-size: 0.85rem; }
-      .books .fan { background: var(--fan); }
-      .books .fan .p { color: var(--fan-ink); font-weight: 700; }
+      
+      
       .books .p { font-weight: 600; }
       .books .unv { color: var(--unv); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.05em; }
       .books .cons { grid-column: 1 / -1; font-size: 0.85rem; color: var(--ink-2); background: var(--surface); border-top: 1px dashed var(--line); padding: 6px 9px; }
-      .prim-tag { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; color: var(--fan-ink); display: block; }
+      
       .glance { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; margin-top: 22px; }
       .glance h2 { font-family: "Barlow Condensed", sans-serif; font-size: 1.3rem; margin: 0 0 8px; text-transform: uppercase; letter-spacing: 0.03em; }
       .glance ul { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 28px; font-size: 0.94rem; }
@@ -227,10 +229,10 @@
           <div class="cell"><span class="k">Model win prob</span><span class="v">Miami 54%</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">MIA −2.5 −110</span></div><div><span class="p">MIA −2.5 −110</span></div><div><span class="p">MIA −2.5 −110</span></div></div>
-          <div class="brow"><div class="mkt">Total 170.5</div><div class="fan"><span class="p">O −110 / U −110 ★ BEST</span></div><div><span class="p">O −110 / U −110</span></div><div><span class="p">O −110 / U −110</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">MIA −140 / ALA +115</span></div><div><span class="p">MIA −135 / ALA +114</span></div><div><span class="p">MIA −138 / ALA +116</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">MIA −2.5 −110</span></div><div><span class="p">MIA −2.5 −110</span></div><div><span class="p">MIA −2.5 −110</span></div></div>
+          <div class="brow"><div class="mkt">Total 170.5</div><div><span class="p">O −110 / U −110 ★ BEST</span></div><div><span class="p">O −110 / U −110</span></div><div><span class="p">O −110 / U −110</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">MIA −140 / ALA +115</span></div><div><span class="p">MIA −135 / ALA +114</span></div><div><span class="p">MIA −138 / ALA +116</span></div></div>
           <div class="brow"><div class="cons">Consensus: Miami −2.5 / 170.5 (opened Miami −2 / 170).</div></div>
         </div>
       </article>
@@ -252,10 +254,10 @@
           <div class="cell"><span class="k">Model win prob</span><span class="v">Tennessee 54%</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">LOU −2 −110 <small>(morning)</small></span></div><div><span class="p">TENN +3.5 −107 ★ BEST <small>(afternoon)</small></span></div><div><span class="p">LOU −1.5 −115 <small>(morning)</small></span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">149.5 · −110/−110 <small>(morning)</small></span></div><div><span class="p">148.5 · O −116 / U −105 <small>(afternoon)</small></span></div><div><span class="p">150.5 · O −104 / U −118 ★ BEST</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">LOU −130 / TENN +110</span></div><div><span class="p">LOU −142 / TENN +120 <small>(morning)</small></span></div><div><span class="p">LOU −130 / TENN +108</span></div></div>
+          <div class="brow head"><div>Market</div><div>DraftKings</div><div>Fanatics</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">TENN +3.5 −107 ★ BEST <small>(afternoon)</small></span></div><div><span class="p">LOU −2 −110 <small>(morning)</small></span></div><div><span class="p">LOU −1.5 −115 <small>(morning)</small></span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">148.5 · O −116 / U −105 <small>(afternoon)</small></span></div><div><span class="p">149.5 · −110/−110 <small>(morning)</small></span></div><div><span class="p">150.5 · O −104 / U −118 ★ BEST</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">LOU −142 / TENN +120 <small>(morning)</small></span></div><div><span class="p">LOU −130 / TENN +110</span></div><div><span class="p">LOU −130 / TENN +108</span></div></div>
           <div class="brow"><div class="cons">Consensus: Louisville −2.5 / 149.5 (opened Tennessee −1.5 / 150.5) — Louisville steamed to −3.5 at DraftKings this afternoon.</div></div>
         </div>
       </article>
@@ -276,10 +278,10 @@
           <div class="cell"><span class="k">Model win prob</span><span class="v">North Carolina 51%</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">WVU −3 −110</span></div><div><span class="p">UNC +3.5 −115 ★ BEST <small>(for the Lean)</small></span></div><div><span class="p">WVU −2.5 −122</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">149 · −110/−110</span></div><div><span class="p">149.5 · −110/−110 ★ BEST</span></div><div><span class="p">149.5 · −110/−110 ★ BEST</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">WVU −150 / UNC +125</span></div><div><span class="p">WVU −155 / UNC +130</span></div><div><span class="p">WVU −156 / UNC +130</span></div></div>
+          <div class="brow head"><div>Market</div><div>DraftKings</div><div>Fanatics</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">UNC +3.5 −115 ★ BEST <small>(for the Lean)</small></span></div><div><span class="p">WVU −3 −110</span></div><div><span class="p">WVU −2.5 −122</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">149.5 · −110/−110 ★ BEST</span></div><div><span class="p">149 · −110/−110</span></div><div><span class="p">149.5 · −110/−110 ★ BEST</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">WVU −155 / UNC +130</span></div><div><span class="p">WVU −150 / UNC +125</span></div><div><span class="p">WVU −156 / UNC +130</span></div></div>
           <div class="brow"><div class="cons">Consensus: West Virginia −3 / 149.5 (opened WVU −1.5 / 149). All three models sit at 149 or lower on the total.</div></div>
         </div>
       </article>
@@ -301,10 +303,10 @@
           <div class="cell"><span class="k">Model win prob</span><span class="v">Michigan 71%</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">KSU +9 −105</span></div><div><span class="p">KSU +9.5 −112 ★ BEST</span></div><div><span class="p">KSU +9.5 −110</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">163.5 · −110/−110</span></div><div><span class="p">164.5 · O −108 / U −112</span></div><div><span class="p">164.5 · −110/−110</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">KSU +340 / MICH −450</span></div><div><span class="p">KSU +340 / MICH −440</span></div><div><span class="p">KSU +365 / MICH −465</span></div></div>
+          <div class="brow head"><div>Market</div><div>DraftKings</div><div>Fanatics</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">KSU +9.5 −112 ★ BEST</span></div><div><span class="p">KSU +9 −105</span></div><div><span class="p">KSU +9.5 −110</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">164.5 · O −108 / U −112</span></div><div><span class="p">163.5 · −110/−110</span></div><div><span class="p">164.5 · −110/−110</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">KSU +340 / MICH −440</span></div><div><span class="p">KSU +340 / MICH −450</span></div><div><span class="p">KSU +365 / MICH −465</span></div></div>
           <div class="brow"><div class="cons">Consensus: Michigan −9.5 / 164.5 (opened Michigan −9 / 163).</div></div>
         </div>
       </article>
@@ -325,10 +327,10 @@
           <div class="cell"><span class="k">Model win prob</span><span class="v">Kentucky 60%</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">UK −4 −110</span></div><div><span class="p">UK −4.5 −112</span></div><div><span class="p">UK −4.5 −110</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">158 · −110/−110</span></div><div><span class="p">158.5 · O −105 / U −115 ★ BEST</span></div><div><span class="p">157.5 · −110/−110</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">WSU +150 / UK −180</span></div><div><span class="p">WSU +170 / UK −205</span></div><div><span class="p">WSU +158 / UK −188</span></div></div>
+          <div class="brow head"><div>Market</div><div>DraftKings</div><div>Fanatics</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">UK −4.5 −112</span></div><div><span class="p">UK −4 −110</span></div><div><span class="p">UK −4.5 −110</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">158.5 · O −105 / U −115 ★ BEST</span></div><div><span class="p">158 · −110/−110</span></div><div><span class="p">157.5 · −110/−110</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">WSU +170 / UK −205</span></div><div><span class="p">WSU +150 / UK −180</span></div><div><span class="p">WSU +158 / UK −188</span></div></div>
           <div class="brow"><div class="cons">Consensus: Kentucky −4.5 / 158.5 (opened Kentucky −5.5 / 159). Price matters: at FanDuel's 157.5 the Under edge is only 1.5 pts.</div></div>
         </div>
       </article>
@@ -350,10 +352,10 @@
           <div class="cell"><span class="k">Status</span><span class="v">No edge — market agrees</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">GONZ −6 −110</span></div><div><span class="p">GONZ −6.5 −110</span></div><div><span class="p">GONZ −5.5 −114</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">160 · −110/−110</span></div><div><span class="p">159.5 · O −115 / U −105</span></div><div><span class="p">159.5 · O −114 / U −106</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">CRE +200 / GONZ −245</span></div><div><span class="p">CRE +205 / GONZ −250</span></div><div><span class="p">CRE +195 / GONZ −235</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">GONZ −6 −110</span></div><div><span class="p">GONZ −6.5 −110</span></div><div><span class="p">GONZ −5.5 −114</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">160 · −110/−110</span></div><div><span class="p">159.5 · O −115 / U −105</span></div><div><span class="p">159.5 · O −114 / U −106</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">CRE +200 / GONZ −245</span></div><div><span class="p">CRE +205 / GONZ −250</span></div><div><span class="p">CRE +195 / GONZ −235</span></div></div>
           <div class="brow"><div class="cons">Consensus: Gonzaga −6 / 159.5 (opened Gonzaga −5.5 / 160).</div></div>
         </div>
       </article>
@@ -374,10 +376,10 @@
           <div class="cell"><span class="k">Status</span><span class="v">No edge — market agrees</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">UGA −5.5 +100</span></div><div><span class="p">UGA −5.5 −108</span></div><div><span class="p">UGA −5.5 −108</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">163.5 · O −115 / U −105</span></div><div><span class="p">162.5 · O −112 / U −108</span></div><div><span class="p">162.5 · −110/−110</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">UGA −235 / UCF +190</span></div><div><span class="p">UGA −230 / UCF +190</span></div><div><span class="p">UGA −225 / UCF +188</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">UGA −5.5 +100</span></div><div><span class="p">UGA −5.5 −108</span></div><div><span class="p">UGA −5.5 −108</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">163.5 · O −115 / U −105</span></div><div><span class="p">162.5 · O −112 / U −108</span></div><div><span class="p">162.5 · −110/−110</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">UGA −235 / UCF +190</span></div><div><span class="p">UGA −230 / UCF +190</span></div><div><span class="p">UGA −225 / UCF +188</span></div></div>
           <div class="brow"><div class="cons">Consensus: Georgia −5.5 / 162.5 (opened Georgia −6 / 164).</div></div>
         </div>
       </article>
@@ -398,10 +400,10 @@
           <div class="cell"><span class="k">Status</span><span class="v">No edge — market agrees</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">TTU −7 −110</span></div><div><span class="p">TTU −7.5 −115</span></div><div><span class="p">TTU −7.5 −114</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">142 · −110/−110</span></div><div><span class="p">142.5 · O −108 / U −112</span></div><div><span class="p">142.5</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">SDSU +265 / TTU −340</span></div><div><span class="p">SDSU +275 / TTU −345</span></div><div><span class="p">SDSU +260 / TTU −320</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">TTU −7 −110</span></div><div><span class="p">TTU −7.5 −115</span></div><div><span class="p">TTU −7.5 −114</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">142 · −110/−110</span></div><div><span class="p">142.5 · O −108 / U −112</span></div><div><span class="p">142.5</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">SDSU +265 / TTU −340</span></div><div><span class="p">SDSU +275 / TTU −345</span></div><div><span class="p">SDSU +260 / TTU −320</span></div></div>
           <div class="brow"><div class="cons">Consensus: Texas Tech −7.5 / 142.5 this morning (opened −7 / 143.5); afternoon consensus moved to −8.5 / 142.5–143.5.</div></div>
         </div>
       </article>
@@ -423,10 +425,10 @@
           <div class="cell"><span class="k">Model win prob</span><span class="v">Illinois 93%</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">ILL −27 −110</span></div><div><span class="p">ILL −26.5 −116</span></div><div><span class="p">ILL −26.5 −120</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">176 · −110/−110</span></div><div><span class="p">175.5 · O −113 / U −107</span></div><div><span class="p">175.5 · O −115 / U −105</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">WKU +4000 / ILL −12000</span></div><div><span class="p">WKU +3000 / ILL −10000</span></div><div><span class="p">WKU +3500 / ILL −30000</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">ILL −27 −110</span></div><div><span class="p">ILL −26.5 −116</span></div><div><span class="p">ILL −26.5 −120</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">176 · −110/−110</span></div><div><span class="p">175.5 · O −113 / U −107</span></div><div><span class="p">175.5 · O −115 / U −105</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">WKU +4000 / ILL −12000</span></div><div><span class="p">WKU +3000 / ILL −10000</span></div><div><span class="p">WKU +3500 / ILL −30000</span></div></div>
           <div class="brow"><div class="cons">Consensus: Illinois −26.5 / 175.5 (opened Illinois −27 / 176).</div></div>
         </div>
       </article>
@@ -447,10 +449,10 @@
           <div class="cell"><span class="k">Status</span><span class="v">No Bet</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">HOU −36 −110</span></div><div><span class="p">HOU −36.5 −105</span></div><div><span class="p">HOU −36.5 −110</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">145 · −110/−110</span></div><div><span class="p">145.5 · O −105 / U −115</span></div><div><span class="p">145.5 · −110/−110</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">OAK +9000 / HOU −50000</span></div><div><span class="p">Not posted</span></div><div><span class="p">Not posted</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">HOU −36 −110</span></div><div><span class="p">HOU −36.5 −105</span></div><div><span class="p">HOU −36.5 −110</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">145 · −110/−110</span></div><div><span class="p">145.5 · O −105 / U −115</span></div><div><span class="p">145.5 · −110/−110</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">OAK +9000 / HOU −50000</span></div><div><span class="p">Not posted</span></div><div><span class="p">Not posted</span></div></div>
           <div class="brow"><div class="cons">Consensus: Houston −36.5 / 145.5 (opened Houston −38 / 150).</div></div>
         </div>
       </article>
@@ -471,10 +473,10 @@
           <div class="cell"><span class="k">Status</span><span class="v">No Bet</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">IND −22 −110</span></div><div><span class="p">IND −21.5 −114</span></div><div><span class="p">IND −22.5 −110</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">151.5</span></div><div><span class="p">151.5</span></div><div><span class="p">152.5</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">BG +2500 / IND −7000</span></div><div><span class="p">BG +1800 / IND −5000</span></div><div><span class="p">BG +2000 / IND −8000</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">IND −22 −110</span></div><div><span class="p">IND −21.5 −114</span></div><div><span class="p">IND −22.5 −110</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">151.5</span></div><div><span class="p">151.5</span></div><div><span class="p">152.5</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">BG +2500 / IND −7000</span></div><div><span class="p">BG +1800 / IND −5000</span></div><div><span class="p">BG +2000 / IND −8000</span></div></div>
           <div class="brow"><div class="cons">Consensus: Indiana −22 / 151.5. Prices from betwatch.io this afternoon.</div></div>
         </div>
       </article>
@@ -495,10 +497,10 @@
           <div class="cell"><span class="k">Model win prob</span><span class="v">Texas 55%</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">TEX −8.5 −105</span></div><div><span class="p">TEX −8.5 −105</span></div><div><span class="p">TEX −8.5 −102</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">159.5 · −110/−110</span></div><div><span class="p">159.5 · O −115 / U −105</span></div><div><span class="p">158.5 · O −110 / U −112</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">SMC +275 / TEX −350</span></div><div><span class="p">SMC +275 / TEX −345</span></div><div><span class="p">SMC +275 / TEX −345</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">TEX −8.5 −105</span></div><div><span class="p">TEX −8.5 −105</span></div><div><span class="p">TEX −8.5 −102</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">159.5 · −110/−110</span></div><div><span class="p">159.5 · O −115 / U −105</span></div><div><span class="p">158.5 · O −110 / U −112</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">SMC +275 / TEX −350</span></div><div><span class="p">SMC +275 / TEX −345</span></div><div><span class="p">SMC +275 / TEX −345</span></div></div>
           <div class="brow"><div class="cons">Consensus: Texas −8.5 / 159.5 (opened Texas −7 / 161). The day's biggest model edge — and it tipped right at refresh, so it is not a pick.</div></div>
         </div>
       </article>
@@ -519,10 +521,10 @@
           <div class="cell"><span class="k">Model win prob</span><span class="v">Texas A&M 56%</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">A&M −1 −105</span></div><div><span class="p">MARQ −1.5 −108</span></div><div><span class="p">A&M −1.5 +104</span></div></div>
-          <div class="brow"><div class="mkt">Total 159.5</div><div class="fan"><span class="p">−110/−110</span></div><div><span class="p">O −115 / U −105</span></div><div><span class="p">−110/−110</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">A&M −110 / MARQ −110</span></div><div><span class="p">A&M −102 / MARQ −118</span></div><div><span class="p">A&M −108 / MARQ −111</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">A&M −1 −105</span></div><div><span class="p">MARQ −1.5 −108</span></div><div><span class="p">A&M −1.5 +104</span></div></div>
+          <div class="brow"><div class="mkt">Total 159.5</div><div><span class="p">−110/−110</span></div><div><span class="p">O −115 / U −105</span></div><div><span class="p">−110/−110</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">A&M −110 / MARQ −110</span></div><div><span class="p">A&M −102 / MARQ −118</span></div><div><span class="p">A&M −108 / MARQ −111</span></div></div>
           <div class="brow"><div class="cons">Consensus: Pick'em / 159.5 (opened Texas A&M −3 / 157). Models split both ways on the side.</div></div>
         </div>
       </article>
@@ -543,10 +545,10 @@
           <div class="cell"><span class="k">Model win prob</span><span class="v">Kansas 88%</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">KU −11.5 −110 <small>(morning)</small></span></div><div><span class="p">KU −10.5 · NOVA +10.5 −109</span></div><div><span class="p">NOVA +10.5 −104</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">159 · <small>(morning)</small></span></div><div><span class="p">158.5 · O −114 / U −106</span></div><div><span class="p">159.5</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">NOVA +525 / KU −750</span></div><div><span class="p">NOVA +500 / KU −700</span></div><div><span class="p">NOVA +470 / KU −650</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">KU −11.5 −110 <small>(morning)</small></span></div><div><span class="p">KU −10.5 · NOVA +10.5 −109</span></div><div><span class="p">NOVA +10.5 −104</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">159 · <small>(morning)</small></span></div><div><span class="p">158.5 · O −114 / U −106</span></div><div><span class="p">159.5</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">NOVA +525 / KU −750</span></div><div><span class="p">NOVA +500 / KU −700</span></div><div><span class="p">NOVA +470 / KU −650</span></div></div>
           <div class="brow"><div class="cons">Consensus: Kansas −10.5 / 158.5 (opened Kansas −14 / 159.5). Single published model (Bleacher Nation) — not graded.</div></div>
         </div>
       </article>
@@ -567,10 +569,10 @@
           <div class="cell"><span class="k">Status</span><span class="v">Live</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">BAY −4.5 −105</span></div><div><span class="p">BAY −4.5 −108</span></div><div><span class="p">BAY −5.5 −102</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">151</span></div><div><span class="p">150.5</span></div><div><span class="p">149.5</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">TCU +160 / BAY −195</span></div><div><span class="p">TCU +164 / BAY −198</span></div><div><span class="p">TCU +176 / BAY −215</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">BAY −4.5 −105</span></div><div><span class="p">BAY −4.5 −108</span></div><div><span class="p">BAY −5.5 −102</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">151</span></div><div><span class="p">150.5</span></div><div><span class="p">149.5</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">TCU +160 / BAY −195</span></div><div><span class="p">TCU +164 / BAY −198</span></div><div><span class="p">TCU +176 / BAY −215</span></div></div>
           <div class="brow"><div class="cons">Consensus: Baylor −4.5 / 150.5 pregame (Boyd's).</div></div>
         </div>
       </article>
@@ -591,10 +593,10 @@
           <div class="cell"><span class="k">Status</span><span class="v">Live</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">MD −3 −110</span></div><div><span class="p">MD −2.5 −110</span></div><div><span class="p">MD −2.5 −120</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">148.5</span></div><div><span class="p">149.5</span></div><div><span class="p">148.5</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">ORE +135 / MD −165</span></div><div><span class="p">ORE +130 / MD −155</span></div><div><span class="p">ORE +125 / MD −150</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">MD −3 −110</span></div><div><span class="p">MD −2.5 −110</span></div><div><span class="p">MD −2.5 −120</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">148.5</span></div><div><span class="p">149.5</span></div><div><span class="p">148.5</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">ORE +135 / MD −165</span></div><div><span class="p">ORE +130 / MD −155</span></div><div><span class="p">ORE +125 / MD −150</span></div></div>
           <div class="brow"><div class="cons">Consensus: Maryland −2.5 / 149.5 pregame (Boyd's).</div></div>
         </div>
       </article>
@@ -615,10 +617,10 @@
           <div class="cell"><span class="k">Status</span><span class="v">Live</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">CIN −8.5 −110</span></div><div><span class="p">CIN −8.5 −108</span></div><div><span class="p">CIN −8.5 −106</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">141</span></div><div><span class="p">140.5</span></div><div><span class="p">141.5</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">BC +310 / CIN −400</span></div><div><span class="p">BC +320 / CIN −410</span></div><div><span class="p">BC +280 / CIN −350</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">CIN −8.5 −110</span></div><div><span class="p">CIN −8.5 −108</span></div><div><span class="p">CIN −8.5 −106</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">141</span></div><div><span class="p">140.5</span></div><div><span class="p">141.5</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">BC +310 / CIN −400</span></div><div><span class="p">BC +320 / CIN −410</span></div><div><span class="p">BC +280 / CIN −350</span></div></div>
           <div class="brow"><div class="cons">Consensus: Cincinnati −8.5 / 140.5 pregame (Boyd's).</div></div>
         </div>
       </article>
@@ -639,10 +641,10 @@
           <div class="cell"><span class="k">Status</span><span class="v">Final</span></div>
         </div>
         <div class="books num">
-          <div class="brow head"><div>Market</div><div>Fanatics<span class="prim-tag">Primary</span></div><div>DraftKings</div><div>FanDuel</div></div>
-          <div class="brow"><div class="mkt">Spread</div><div class="fan"><span class="p">UCLA −8 −110</span></div><div><span class="p">UCLA −7.5 −115</span></div><div><span class="p">UCLA −7.5 −120</span></div></div>
-          <div class="brow"><div class="mkt">Total</div><div class="fan"><span class="p">150</span></div><div><span class="p">149.5</span></div><div><span class="p">150.5</span></div></div>
-          <div class="brow"><div class="mkt">Moneyline</div><div class="fan"><span class="p">—</span></div><div><span class="p">—</span></div><div><span class="p">—</span></div></div>
+          <div class="brow head"><div>Market</div><div>Fanatics</div><div>DraftKings</div><div>FanDuel</div></div>
+          <div class="brow"><div class="mkt">Spread</div><div><span class="p">UCLA −8 −110</span></div><div><span class="p">UCLA −7.5 −115</span></div><div><span class="p">UCLA −7.5 −120</span></div></div>
+          <div class="brow"><div class="mkt">Total</div><div><span class="p">150</span></div><div><span class="p">149.5</span></div><div><span class="p">150.5</span></div></div>
+          <div class="brow"><div class="mkt">Moneyline</div><div><span class="p">—</span></div><div><span class="p">—</span></div><div><span class="p">—</span></div></div>
           <div class="brow"><div class="cons">Consensus: UCLA −7.5 / 149.5 pregame (Boyd's).</div></div>
         </div>
       </article>
