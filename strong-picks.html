@@ -43,6 +43,7 @@
   .sport-head h2{margin:0;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:17px;letter-spacing:.04em;text-transform:uppercase;line-height:1}
   .sport-head .slate{font-size:11.5px;color:var(--muted);font-weight:600;white-space:nowrap}
   .sport-head .rule{flex:1;height:1px;background:var(--line-strong);min-width:12px}
+@media (max-width:640px){ .sport-head{flex-wrap:wrap} .sport-head .rule{min-width:0} }
   .sport-head .tally{font-size:11px;font-weight:700;letter-spacing:.03em;padding:3px 8px;border-radius:999px;white-space:nowrap}
   .tally.has{background:var(--green-bg);color:var(--green);border:1px solid var(--green-border)}
   .tally.none{background:var(--surface-2);color:var(--muted);border:1px solid var(--line)}
@@ -60,10 +61,10 @@
   .books{padding:10px 13px 4px}
   .books-label{font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
   .book-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 9px;border:1px solid var(--line);border-radius:8px;margin-bottom:6px;background:var(--surface-2);min-height:36px}
-  .book-row.primary{background:var(--fan-bg);border-color:var(--fan-border)}
+  
   .bname{font-weight:700;font-size:12.5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-  .bname .prim{font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--fan-ink);border:1px solid var(--fan-border);padding:2px 5px;border-radius:4px;line-height:1;background:var(--surface)}
-  @media (prefers-color-scheme: dark){ .bname .prim{background:transparent} }
+  .bname 
+  @media (prefers-color-scheme: dark){ .bname  }
   .bprice{font-weight:700;font-size:13px;text-align:right;display:flex;align-items:center;gap:7px;flex-wrap:wrap;justify-content:flex-end}
   .bprice .on-line{font-weight:600;font-size:11.5px;color:var(--muted)}
   .best-pill{background:var(--best-bg);color:var(--best-ink);font-size:9.5px;font-weight:700;letter-spacing:.06em;padding:3px 6px;border-radius:4px;line-height:1;text-transform:uppercase}
@@ -155,8 +156,8 @@
       </div>
       <div class="books num">
         <div class="books-label">Best price — three books</div>
-        <div class="book-row primary"><span class="bname">Fanatics <span class="prim">Primary</span></span><span class="bprice"><span class="unv">UNVERIFIED — price not available</span></span></div>
         <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">−118 <span class="on-line">on Washington −6.5</span> <span class="best-pill">★ Best</span></span></div>
+        <div class="book-row"><span class="bname">Fanatics</span><span class="bprice"><span class="unv">UNVERIFIED — price not available</span></span></div>
         <div class="book-row"><span class="bname">FanDuel</span><span class="bprice"><span class="unv">UNVERIFIED — price not available</span></span></div>
       </div>
       <div class="mynum num">
@@ -201,9 +202,9 @@
       </div>
       <div class="books num">
         <div class="books-label">Best price — three books</div>
-        <div class="book-row primary"><span class="bname">Fanatics <span class="prim">Primary</span></span><span class="bprice">−110 <span class="on-line">on Texas −11</span> <span class="best-pill">★ Best line</span></span></div>
-        <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">−108 <span class="on-line">on Texas −11.5</span></span></div>
+        <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">−110 <span class="on-line">on Texas −11</span> <span class="best-pill">★ Best line</span></span></div>
         <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">−106 <span class="on-line">on Texas −11.5</span></span></div>
+        <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">−108 <span class="on-line">on Texas −11.5</span></span></div>
       </div>
       <div class="mynum num">
         <div class="cell"><span class="k">My Number</span><span class="v">TEX −16.1 <small>SP+ −18.1 / FPI −14.1</small></span></div>
@@ -228,7 +229,7 @@
       </div>
       <div class="books num">
         <div class="books-label">Best price — three books</div>
-        <div class="book-row primary"><span class="bname">Fanatics <span class="prim">Primary</span></span><span class="bprice">−110 <span class="on-line">on Miami −25</span> <span class="best-pill">★ Best line</span></span></div>
+        <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">−110 <span class="on-line">on Miami −25</span> <span class="best-pill">★ Best line</span></span></div>
         <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">−115 <span class="on-line">on Miami −24.5</span></span></div>
         <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">−115 <span class="on-line">on Miami −24.5</span></span></div>
       </div>
@@ -291,7 +292,7 @@
       </div>
       <div class="books num">
         <div class="books-label">Best price — three books</div>
-        <div class="book-row primary"><span class="bname">Fanatics <span class="prim">Primary</span></span><span class="bprice">−110 <span class="on-line">on Under 170.5</span> <span class="best-pill">★ Best</span></span></div>
+        <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">−110 <span class="on-line">on Under 170.5</span> <span class="best-pill">★ Best</span></span></div>
         <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">−110 <span class="on-line">on Under 170.5</span></span></div>
         <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">−110 <span class="on-line">on Under 170.5</span></span></div>
       </div>
@@ -317,8 +318,8 @@
       </div>
       <div class="books num">
         <div class="books-label">Best price — three books</div>
-        <div class="book-row primary"><span class="bname">Fanatics <span class="prim">Primary</span></span><span class="bprice"><span class="unv">UNVERIFIED</span> <span class="on-line">on Tennessee +3.5</span></span></div>
         <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">−107 <span class="on-line">on Tennessee +3.5</span> <span class="best-pill">★ Best</span></span></div>
+        <div class="book-row"><span class="bname">Fanatics</span><span class="bprice"><span class="unv">UNVERIFIED</span> <span class="on-line">on Tennessee +3.5</span></span></div>
         <div class="book-row"><span class="bname">FanDuel</span><span class="bprice"><span class="unv">UNVERIFIED</span> <span class="on-line">on Tennessee +3.5</span></span></div>
       </div>
       <div class="mynum num">
@@ -343,9 +344,9 @@
       </div>
       <div class="books num">
         <div class="books-label">Best price — three books</div>
-        <div class="book-row primary"><span class="bname">Fanatics <span class="prim">Primary</span></span><span class="bprice">−110 <span class="on-line">on Under 149</span></span></div>
         <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">−110 <span class="on-line">on Under 149.5</span> <span class="best-pill">★ Best</span></span></div>
         <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">−110 <span class="on-line">on Under 149.5</span> <span class="best-pill">★ Best</span></span></div>
+        <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">−110 <span class="on-line">on Under 149</span></span></div>
       </div>
       <div class="mynum num">
         <div class="cell"><span class="k">My Total — blend</span><span class="v">146.3</span></div>
@@ -369,9 +370,9 @@
       </div>
       <div class="books num">
         <div class="books-label">Best price — three books</div>
-        <div class="book-row primary"><span class="bname">Fanatics <span class="prim">Primary</span></span><span class="bprice">−105 <span class="on-line">on Kansas State +9</span></span></div>
         <div class="book-row"><span class="bname">DraftKings</span><span class="bprice">−112 <span class="on-line">on Kansas State +9.5</span> <span class="best-pill">★ Best</span></span></div>
         <div class="book-row"><span class="bname">FanDuel</span><span class="bprice">−110 <span class="on-line">on Kansas State +9.5</span></span></div>
+        <div class="book-row"><span class="bname">Fanatics</span><span class="bprice">−105 <span class="on-line">on Kansas State +9</span></span></div>
       </div>
       <div class="mynum num">
         <div class="cell"><span class="k">My Number — blend</span><span class="v">MICH −6.5</span></div>
