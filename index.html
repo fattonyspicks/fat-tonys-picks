@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="color-scheme" content="light dark" />
     <meta name="description" content="Fat Tony's Picks — daily model-first sports picks across the NFL, college football, NBA and college basketball. Every price checked at Fanatics, DraftKings and FanDuel." />
-    <link rel="icon" href="data:," />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <title>Fat Tony's Picks — Daily Sports Picks &amp; Betting Boards</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -106,6 +107,7 @@
         .price b{font-size:13px}
         .price span{font-size:10px}
       }
+      @media (max-width:640px){ .strong-row{flex-wrap:wrap} .strong-row .pick b{white-space:normal;overflow:visible;text-overflow:clip} }
       @media (max-width:400px){ .strong-row .pick b{font-size:12px} }
       .board-links{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
       .board-links a{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--line-strong);border-radius:9px;padding:10px 13px;text-decoration:none;background:var(--surface-2);min-height:44px}
@@ -180,6 +182,17 @@
       footer p{font-size:13.5px;line-height:1.6;max-width:none;margin:10px 0 0}
       footer .fine{color:#7e7a6c;font-size:12.5px;margin-top:16px}
     </style>
+  
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fat Tony's Picks" />
+    <meta property="og:title" content="Fat Tony's Picks — Daily Sports Picks & Betting Boards" />
+    <meta property="og:description" content="Fat Tony's Picks — daily model-first sports picks across the NFL, college football, NBA and college basketball. Every price checked at Fanatics, DraftKings and FanDuel." />
+    <meta property="og:url" content="https://fattonyspicks.github.io/fat-tonys-picks/" />
+    <meta property="og:image" content="https://fattonyspicks.github.io/fat-tonys-picks/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fat Tony's Picks — Daily Sports Picks & Betting Boards" />
+    <meta name="twitter:description" content="Fat Tony's Picks — daily model-first sports picks across the NFL, college football, NBA and college basketball. Every price checked at Fanatics, DraftKings and FanDuel." />
+    <meta name="twitter:image" content="https://fattonyspicks.github.io/fat-tonys-picks/og-image.png" />
   </head>
   <body>
     <header class="topbar">
@@ -471,7 +484,7 @@
           <div class="step">
             <span class="num">Step 3</span>
             <h3>Ranked, not padded</h3>
-            <p>Picks are graded Strong, Lean or No Bet, and only Strong and Lean make the boards. After the close, every pick is graded against the closing line — wins and losses both stay on the record.</p>
+            <p>Picks are graded Strong, Lean or No Bet, and only Strong and Lean make the boards. After the close, every pick is checked against the closing line — that check is how the model’s number gets tested, night after night.</p>
           </div>
         </div>
         <div class="books-row" aria-label="Books checked for every pick">
@@ -520,7 +533,7 @@
           <div class="social">
             <h3 class="plat">YouTube</h3>
             <p class="handle">@FatTonysPicks</p>
-            <p>The weekly recap and the longer breakdowns — every board walked through pick by pick, with the record graded out loud.</p>
+            <p>The weekly recap and the longer breakdowns — every board walked through pick by pick.</p>
             <span class="first">Coming next</span>
           </div>
           <div class="social">
